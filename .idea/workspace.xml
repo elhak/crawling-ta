@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d738816-ad24-4085-ad07-db8b5acd8d63" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Crawl/src/main/resources/logback.tld" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Crawl/target/classes/logback.tld" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/target/classes/MyCrawler.class" afterPath="$PROJECT_DIR$/Crawl/target/classes/MyCrawler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/frontier/00000000.jdb" afterPath="$PROJECT_DIR$/data/frontier/00000000.jdb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/src/main/java/MyCrawler.java" afterPath="$PROJECT_DIR$/Crawl/src/main/java/MyCrawler.java" />
     </list>
     <ignored path="Crawling.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,8 +39,8 @@
       <file leaf-file-name="MyCrawler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/MyCrawler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+            <state relative-caret-position="198">
+              <caret line="97" column="21" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -701,12 +697,20 @@
       <updated>1463728847902</updated>
       <workItem from="1463728853841" duration="4480000" />
       <workItem from="1463779974241" duration="10935000" />
-      <workItem from="1463793766881" duration="1730000" />
+      <workItem from="1463793766881" duration="1763000" />
     </task>
+    <task id="LOCAL-00001" summary="PUSH PUSH">
+      <created>1463795517062</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1463795517062</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17145000" />
+    <option name="totallyTimeSpent" value="17178000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -749,6 +753,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="PUSH PUSH" />
+    <option name="LAST_COMMIT_MESSAGE" value="PUSH PUSH" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -933,8 +941,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/MyCrawler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+        <state relative-caret-position="198">
+          <caret line="97" column="21" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
