@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8d738816-ad24-4085-ad07-db8b5acd8d63" name="Default" comment="" />
+    <list default="true" id="8d738816-ad24-4085-ad07-db8b5acd8d63" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Crawl/src/main/resources/logback.tld" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Crawl/target/classes/logback.tld" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/target/classes/MyCrawler.class" afterPath="$PROJECT_DIR$/Crawl/target/classes/MyCrawler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/frontier/00000000.jdb" afterPath="$PROJECT_DIR$/data/frontier/00000000.jdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/src/main/java/MyCrawler.java" afterPath="$PROJECT_DIR$/Crawl/src/main/java/MyCrawler.java" />
+    </list>
     <ignored path="Crawling.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/Crawl/target/" />
@@ -33,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyCrawler.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MyCrawler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/MyCrawler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="844">
-              <caret line="81" column="23" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="23" />
+            <state relative-caret-position="317">
+              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,29 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBConnect.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/DBConnect.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1463792715586" expanded="true" signature="913:996" placeholder="INSERT INTO crawling... " />
-                <marker date="1463792715586" expanded="true" signature="913:997" placeholder="INSERT INTO crawling... " />
-                <marker date="1463792715586" expanded="true" signature="913:1024" placeholder="INSERT INTO crawling... " />
-                <marker date="1463792715586" expanded="true" signature="913:1029" placeholder="INSERT INTO crawling... " />
-                <marker date="1463792715586" expanded="true" signature="913:1061" placeholder="INSERT INTO crawling... " />
-                <marker date="1463792715586" expanded="true" signature="1281:1401" placeholder="INSERT INTO crawling_mapper... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="45">
+              <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,6 +73,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="modificationStamps">
@@ -110,8 +102,9 @@
         <option value="$PROJECT_DIR$/Crawl/src/main/resources/logback.tld" />
         <option value="$PROJECT_DIR$/Crawl/src/main/java/Domain/Crawling.java" />
         <option value="$PROJECT_DIR$/Crawl/src/main/java/DBConnect.java" />
-        <option value="$PROJECT_DIR$/Crawl/src/main/java/MyCrawler.java" />
         <option value="$PROJECT_DIR$/Crawl/src/main/java/Controller.java" />
+        <option value="$PROJECT_DIR$/Crawl/src/main/resources/logback.xml" />
+        <option value="$PROJECT_DIR$/Crawl/src/main/java/MyCrawler.java" />
       </list>
     </option>
   </component>
@@ -138,7 +131,7 @@
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -241,32 +234,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Crawling" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Crawl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Domain" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -734,12 +701,12 @@
       <updated>1463728847902</updated>
       <workItem from="1463728853841" duration="4480000" />
       <workItem from="1463779974241" duration="10935000" />
-      <workItem from="1463793766881" duration="245000" />
+      <workItem from="1463793766881" duration="1730000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15660000" />
+    <option name="totallyTimeSpent" value="17145000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -763,7 +730,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.659306" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6514196" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -885,14 +852,6 @@
     <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/BasicCrawler.java" />
     <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/BasicCrawlController.java" />
     <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Main.java" />
-    <entry file="file://$PROJECT_DIR$/Crawl/src/main/resources/logback.tld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="53" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/crawler4j-4.1-jar-with-dependencies.jar!/edu/uci/ics/crawler4j/parser/HtmlParseData.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -922,22 +881,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/DBConnect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1463792715586" expanded="true" signature="913:996" placeholder="INSERT INTO crawling... " />
-            <marker date="1463792715586" expanded="true" signature="913:997" placeholder="INSERT INTO crawling... " />
-            <marker date="1463792715586" expanded="true" signature="913:1024" placeholder="INSERT INTO crawling... " />
-            <marker date="1463792715586" expanded="true" signature="913:1029" placeholder="INSERT INTO crawling... " />
-            <marker date="1463792715586" expanded="true" signature="913:1061" placeholder="INSERT INTO crawling... " />
-            <marker date="1463792715586" expanded="true" signature="1281:1401" placeholder="INSERT INTO crawling_mapper... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/crawler4j-4.1-jar-with-dependencies.jar!/edu/uci/ics/crawler4j/url/WebURL.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1448">
@@ -954,20 +897,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/MyCrawler.java">
+    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="844">
-          <caret line="81" column="23" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="23" />
+        <state relative-caret-position="45">
+          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Controller.java">
+    <entry file="file://$PROJECT_DIR$/Crawl/src/main/resources/logback.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="102">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/DBConnect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1463792715586" expanded="true" signature="913:996" placeholder="INSERT INTO crawling... " />
+            <marker date="1463792715586" expanded="true" signature="913:997" placeholder="INSERT INTO crawling... " />
+            <marker date="1463792715586" expanded="true" signature="913:1024" placeholder="INSERT INTO crawling... " />
+            <marker date="1463792715586" expanded="true" signature="913:1029" placeholder="INSERT INTO crawling... " />
+            <marker date="1463792715586" expanded="true" signature="913:1061" placeholder="INSERT INTO crawling... " />
+            <marker date="1463792715586" expanded="true" signature="1281:1401" placeholder="INSERT INTO crawling_mapper... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/MyCrawler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

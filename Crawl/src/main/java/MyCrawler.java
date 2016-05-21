@@ -75,8 +75,6 @@ public class MyCrawler extends WebCrawler {
 
         if (page.getParseData() instanceof HtmlParseData) {
             HtmlParseData htmlParseData = (HtmlParseData) page.getParseData();
-            String text = htmlParseData.getText();
-            String html = htmlParseData.getHtml();
             Set<WebURL> links = htmlParseData.getOutgoingUrls();
 
             for (WebURL webURL : links){
@@ -91,7 +89,6 @@ public class MyCrawler extends WebCrawler {
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
-
                 crawlingList.add(crawling);
             }
         }
