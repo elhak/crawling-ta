@@ -11,29 +11,29 @@
     </content>
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://D:/crawler4j-4.1-jar-with-dependencies.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://D:/slf4j-simple-1.7.21.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
     <orderEntry type="library" name="org.jsoup:jsoup:1.9.2" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://D:/mysql-connector-java-5.0.8-bin.jar!/" />
+          <root url="jar://$MODULE_DIR$/../crawler4j-4.1-jar-with-dependencies.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../mysql-connector-java-5.0.8-bin.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../slf4j-simple-1.7.21.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

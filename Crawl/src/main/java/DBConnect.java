@@ -29,7 +29,7 @@ public class DBConnect {
 
     public int insertData (Crawling crawling) throws SQLException {
         Statement st = conn.createStatement();
-        String sql = "INSERT INTO crawling (domain, url, parent_url) values('" + crawling.getDomain() + "', '" + crawling.getUrl() + "', '"+ crawling.getParent_url() +"')";
+            String sql = "INSERT INTO crawling (domain, url, level, parent_url) values('" + crawling.getDomain() + "', '" + crawling.getUrl() + "', '"+  crawling.getLevel() + "', '"+ crawling.getParent_url() +"')";
         return st.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
     }
 
@@ -37,6 +37,18 @@ public class DBConnect {
         Statement st = conn.createStatement();
         String sql = "INSERT INTO crawling_mapper (url_id, parent_url_id) values('" + crawling.getId() + "', '" + crawling.getParentId() + "')";
         return st.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
+    }
+
+    public ResultSet selectAll() throws SQLException {
+        Statement st = conn.createStatement();
+        String sql = "select * from crawling";
+        return st.executeQuery(sql);
+    }
+
+    public ResultSet selectParent(String parent) throws SQLException {
+        Statement st = conn.createStatement();
+        String sql = "select * from crawling where url = '" + parent +"'";
+        return st.executeQuery(sql);
     }
 
     @Override

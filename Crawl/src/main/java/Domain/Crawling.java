@@ -9,6 +9,7 @@ public class Crawling {
     private String url;
     private String domain;
     private String parent_url;
+    private int level;
     private int parentId;
 
     public Crawling() {
@@ -52,5 +53,13 @@ public class Crawling {
 
     public void setParent_url(String parent_url) {
         this.parent_url = parent_url;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
     }
 }
