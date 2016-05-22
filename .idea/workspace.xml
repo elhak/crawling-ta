@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d738816-ad24-4085-ad07-db8b5acd8d63" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/frontier/00000000.jdb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/frontier/je.info.0" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/frontier/je.lck" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/target/classes/Controller.class" afterPath="$PROJECT_DIR$/Crawl/target/classes/Controller.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/target/classes/MyCrawler.class" afterPath="$PROJECT_DIR$/Crawl/target/classes/MyCrawler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/Crawl.iml" afterPath="$PROJECT_DIR$/Crawl/Crawl.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/src/main/java/Controller.java" afterPath="$PROJECT_DIR$/Crawl/src/main/java/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/src/main/java/DBConnect.java" afterPath="$PROJECT_DIR$/Crawl/src/main/java/DBConnect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/src/main/java/Domain/Crawling.java" afterPath="$PROJECT_DIR$/Crawl/src/main/java/Domain/Crawling.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/src/main/java/MyCrawler.java" afterPath="$PROJECT_DIR$/Crawl/src/main/java/MyCrawler.java" />
     </list>
     <ignored path="Crawling.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -119,6 +111,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Hakim" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
@@ -676,7 +673,7 @@
       <workItem from="1463793766881" duration="1769000" />
       <workItem from="1463795660721" duration="1350000" />
       <workItem from="1463840205974" duration="3766000" />
-      <workItem from="1463885087677" duration="9872000" />
+      <workItem from="1463885087677" duration="9905000" />
     </task>
     <task id="LOCAL-00001" summary="PUSH PUSH">
       <created>1463795517062</created>
@@ -692,15 +689,22 @@
       <option name="project" value="LOCAL" />
       <updated>1463795538003</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Finish Crawling">
+      <created>1463912503248</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1463912503248</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32172000" />
+    <option name="totallyTimeSpent" value="32205000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -721,7 +725,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5220949" sideWeight="0.4969743" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5220949" sideWeight="0.4969743" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -743,7 +747,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="PUSH PUSH" />
-    <option name="LAST_COMMIT_MESSAGE" value="PUSH PUSH" />
+    <MESSAGE value="Finish Crawling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish Crawling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
