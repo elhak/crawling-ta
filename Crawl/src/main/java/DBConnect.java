@@ -16,8 +16,8 @@ public class DBConnect {
     public DBConnect() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/dev_tugasakhir";
-            conn = DriverManager.getConnection(url, "root", "");
+            String url = "jdbc:mysql://31.220.53.30/tugasakhir";
+            conn = DriverManager.getConnection(url, "hakim", "hakimmarsudi");
             System.out.println("conn built");
         } catch (SQLException e) {
             e.printStackTrace();
@@ -32,8 +32,8 @@ public class DBConnect {
     }
 
     public int insertData (Crawling crawling) throws SQLException {
-        Statement st = conn.createStatement();
         String sql = "INSERT INTO crawling_url (domain, url, level) values('" + crawling.getDomain() + "', '" + crawling.getUrl() + "', '"+  crawling.getLevel() + "')";
+        PreparedStatement st = conn.prepareStatement(sql);
         st.executeUpdate(sql);
         String last_id = "SELECT LAST_INSERT_ID() as id";
         ResultSet rs = st.executeQuery(last_id);

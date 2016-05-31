@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Crawl:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Crawl_jar</output-path>
+    <root id="archive" name="Crawl.jar">
+      <element id="module-output" name="Crawl" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Crawl/lib/mysql-connector-java-5.0.8-bin.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Crawl/lib/crawler4j-4.1-jar-with-dependencies.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Crawl/lib/slf4j-simple-1.7.21.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.9.2/jsoup-1.9.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

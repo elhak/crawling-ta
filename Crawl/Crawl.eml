@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component LANGUAGE_LEVEL="JDK_1_5" jdk="1.8" jdk_type="JavaSDK">
+	<output-test url="file://$MODULE_DIR$/target/test-classes"/>
+	<contentEntry url="file://$MODULE_DIR$">
+		<testFolder url="file://$MODULE_DIR$/src/test/java"/>
+		<excludeFolder url="file://$MODULE_DIR$/target"/>
+	</contentEntry>
+	<lib name="crawler4j-4.1-jar-with-dependencies.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/Crawl/lib/crawler4j-4.1-jar-with-dependencies.jar!/"/>
+	</lib>
+	<lib name="mysql-connector-java-5.0.8-bin.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/Crawl/lib/mysql-connector-java-5.0.8-bin.jar!/"/>
+	</lib>
+	<lib name="slf4j-simple-1.7.21.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/Crawl/lib/slf4j-simple-1.7.21.jar!/"/>
+	</lib>
+	<levels>
+		<level name="org.jsoup:jsoup:1.9.2" value="project"/>
+	</levels>
+</component>

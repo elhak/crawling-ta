@@ -21,6 +21,7 @@ public class Controller {
     public static void main(String[] args) throws Exception {
 
         System.out.print("Enter something:");
+
         BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
         String s = bufferRead.readLine();
 
