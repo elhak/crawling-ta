@@ -5,8 +5,8 @@ import edu.uci.ics.crawler4j.parser.HtmlParseData;
 import edu.uci.ics.crawler4j.url.WebURL;
 import org.apache.http.Header;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
 
@@ -41,6 +41,8 @@ public class MyCrawler extends WebCrawler {
     @Override
     public void visit(Page page) {
         WebURL webURL = page.getWebURL();
+        boolean isParentExist = false;
+        boolean isUrlExist = false;
 
         logger.info("URL: {}", webURL.getURL());
         logger.info("Parent URL: {}", webURL.getParentUrl());
@@ -49,34 +51,36 @@ public class MyCrawler extends WebCrawler {
         crawling.setUrl(webURL.getURL());
         crawling.setDomain(webURL.getDomain());
         crawling.setLevel(webURL.getDepth());
-        crawling.setParent_url(webURL.getParentUrl());
+        crawling.setParentUrl(webURL.getParentUrl());
 
         try {
-            db.insertData(crawling);
+            ResultSet urlSet = db.checkUrl(crawling.getUrl());
+            while (urlSet.next()){
+                crawling.setId(urlSet.getInt("id"));
+                isUrlExist = true;
+            }
+
+            if(!isUrlExist){
+                crawling.setId(db.insertData(crawling));
+            }
+
+            if(crawling.getLevel() > 0){
+                ResultSet parentSet = db.checkParent(crawling.getParentUrl());
+                while (parentSet.next()){
+                    crawling.setParentId(parentSet.getInt("id"));
+                    isParentExist = true;
+                }
+
+                if(!isParentExist){
+                    crawling.setParentId(db.insertParentData(crawling));
+                }
+
+                if(!db.checkMapper(crawling)){
+                    db.insertMapper(crawling);
+                }
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
-        if (page.getParseData() instanceof HtmlParseData) {
-            HtmlParseData htmlParseData = (HtmlParseData) page.getParseData();
-            String text = htmlParseData.getText();
-            String html = htmlParseData.getHtml();
-            Set<WebURL> links = htmlParseData.getOutgoingUrls();
-
-            logger.info("Text length: {}", text.length());
-            logger.info("Html length: {}", html.length());
-            logger.info("Number of outgoing links: {}", links.size());
-        }
-
-        Header[] responseHeaders = page.getFetchResponseHeaders();
-        if (responseHeaders != null) {
-            logger.debug("Response headers:");
-            for (Header header : responseHeaders) {
-                logger.debug("\t{}: {}", header.getName(), header.getValue());
-            }
-        }
-
-        logger.debug("=============");
     }
 }

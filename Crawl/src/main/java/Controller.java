@@ -43,7 +43,7 @@ public class Controller {
 
             config.setIncludeBinaryContentInCrawling(false);
 
-            config.setResumableCrawling(true);
+            config.setResumableCrawling(false);
 
             PageFetcher pageFetcher = new PageFetcher(config);
             RobotstxtConfig robotstxtConfig = new RobotstxtConfig();
@@ -55,29 +55,9 @@ public class Controller {
 
             controller.start(MyCrawler.class, numberOfCrawlers);
         }else{
-            mapper_link();
-        }
-    }
-
-    public static void mapper_link() throws SQLException {
-        ResultSet rs = db.selectAll();
-
-        while (rs.next()){
-            Crawling crawling = new Crawling();
-            String parent_url = rs.getString("parent_url");
-            crawling.setId(rs.getInt("id"));
-
-            if(parent_url.equals("null")){
-                crawling.setParentId(0);
-            }else{
-                ResultSet rss = db.selectParent(parent_url);
-                while (rss.next()){
-                    crawling.setParentId(rss.getInt("id"));
-                }
-            }
-
-            db.insertMapper(crawling);
-            logger.info(parent_url);
+            double dampingFactor = 0.85;
+            Ranked ranked = new Ranked(dampingFactor);
+            ranked.RankScore();
         }
     }
 }
