@@ -1,3 +1,5 @@
+import Connect.Constants;
+import Connect.DBConnect;
 import Domain.Crawling;
 import Domain.Link;
 import Domain.Rank;
@@ -13,6 +15,7 @@ import java.util.List;
  * Created by Hakim on 27-May-16.
  */
 public class Ranked implements Ranking{
+
     private DBConnect db = new DBConnect();
     private double dampingScore;
 
@@ -23,12 +26,13 @@ public class Ranked implements Ranking{
     }
 
     public Double inLinkScore(Crawling crawling) {
-        Double inLinkScore = 0.0;
+        Double inLinkScore;
         Double iStart = 0.0;
         Double iNext   = 0.0;
         List<Link> iNextList = new ArrayList<Link>();
         try {
             iStart = db.selectInLink(crawling.getId());
+            iNext = iStart;
             ResultSet resultSet = db.selectByParentId(crawling.getParentId());
             while (resultSet.next()){
                 iNextList.add(new Link(resultSet.getInt("url_id"), db.selectInLink(resultSet.getInt("url_id"))));
@@ -49,12 +53,13 @@ public class Ranked implements Ranking{
     }
 
     public Double outLinkScore(Crawling crawling) {
-        Double outLinkScore = 0.0;
+        Double outLinkScore;
         Double iStart = 0.0;
         Double iNext   = 0.0;
         List<Link> iNextList = new ArrayList<Link>();
         try {
             iStart = db.selectOutlink(crawling.getId());
+            iNext = iStart;
             ResultSet resultSet = db.selectByParentId(crawling.getParentId());
             while (resultSet.next()){
                 iNextList.add(new Link(resultSet.getInt("url_id"), db.selectOutlink(resultSet.getInt("url_id"))));
@@ -96,7 +101,7 @@ public class Ranked implements Ranking{
 
         if(crawlingList != null){
             for (Crawling crawling : crawlingList){
-                double rankScore = 0.0;
+                double rankScore;
                 double parentRank = 0.0;
                 Rank rank = new Rank();
                 rank.setUrlId(crawling.getId());
@@ -106,6 +111,7 @@ public class Ranked implements Ranking{
                 rank.setParentId(crawling.getParentId());
 
                 try {
+
                     ResultSet rankScoreList = db.selectRankScore(crawling.getParentId());
                     while (rankScoreList.next()){
                         if(Constants.DEBUG) logger.info("parent rank score" + rankScoreList.getDouble("rank_score"));

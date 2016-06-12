@@ -1,22 +1,26 @@
+import Connect.DBConnect;
 import Domain.Crawling;
+import Domain.Token;
+import Preprocess.Stoplist;
 import edu.uci.ics.crawler4j.crawler.Page;
 import edu.uci.ics.crawler4j.crawler.WebCrawler;
 import edu.uci.ics.crawler4j.parser.HtmlParseData;
 import edu.uci.ics.crawler4j.url.WebURL;
-import org.apache.http.Header;
+import Preprocess.Tokenizer;
+import javafx.scene.paint.Stop;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Pattern;
 
 public class MyCrawler extends WebCrawler {
 
-    public static DBConnect db = new DBConnect();
+    private DBConnect db = new DBConnect();
 
-    private static final Pattern FILTER = Pattern.compile(".*(\\.(css|js|gif|jpg"
+    private static final Pattern FILTER = Pattern.compile(".*(\\.(css|js|gif|jpg|jpeg"
                                                                         + "|png|mp3|mp3|zip|gz))$");
-
 
     /**
      * You should implement this function to specify whether the given url
@@ -27,6 +31,10 @@ public class MyCrawler extends WebCrawler {
         String href = url.getURL().toLowerCase();
         // Ignore the url if it has an extension that matches our defined set of image extensions.
         if (FILTER.matcher(href).matches()) {
+            return false;
+        }
+
+        if(url.getURL().contains("edit")){
             return false;
         }
 
@@ -43,6 +51,8 @@ public class MyCrawler extends WebCrawler {
         WebURL webURL = page.getWebURL();
         boolean isParentExist = false;
         boolean isUrlExist = false;
+        String title = "";
+        String output = "";
 
         logger.info("URL: {}", webURL.getURL());
         logger.info("Parent URL: {}", webURL.getParentUrl());
@@ -53,7 +63,16 @@ public class MyCrawler extends WebCrawler {
         crawling.setLevel(webURL.getDepth());
         crawling.setParentUrl(webURL.getParentUrl());
 
+        if(page.getParseData() instanceof HtmlParseData){
+            HtmlParseData htmlParseData = (HtmlParseData) page.getParseData();
+            String text = htmlParseData.getText();
+            title = htmlParseData.getTitle();
+            output = text.replaceAll("[^a-zA-Z ]", " ");
+            crawling.setTitle(title);
+        }
+
         try {
+
             ResultSet urlSet = db.checkUrl(crawling.getUrl());
             while (urlSet.next()){
                 crawling.setId(urlSet.getInt("id"));
@@ -62,6 +81,7 @@ public class MyCrawler extends WebCrawler {
 
             if(!isUrlExist){
                 crawling.setId(db.insertData(crawling));
+                db.insertContent(crawling.getId(), output);
             }
 
             if(crawling.getLevel() > 0){
@@ -83,4 +103,5 @@ public class MyCrawler extends WebCrawler {
             e.printStackTrace();
         }
     }
+
 }

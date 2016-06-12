@@ -6,6 +6,7 @@ package Domain;
 public class Crawling {
 
     private int id;
+    private String title;
     private String url;
     private String domain;
     private String parentUrl;
@@ -61,5 +62,13 @@ public class Crawling {
 
     public void setLevel(int level) {
         this.level = level;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }
