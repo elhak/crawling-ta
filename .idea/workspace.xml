@@ -10,30 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d738816-ad24-4085-ad07-db8b5acd8d63" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Crawl/src/main/java/Domain/Token.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Crawl/src/main/java/Extraction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Crawl/src/main/java/FrequencyCount.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Crawl/src/main/java/preprocess/PorterStemmer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Crawl/src/main/java/preprocess/Stoplist.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Crawl/src/main/java/preprocess/Tokenizer.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Crawl/target/classes/Constants.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Crawl/target/classes/DBConnect.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/root/frontier/00000000.jdb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/root/frontier/je.info.0" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/root/frontier/je.info.0.lck" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/root/frontier/je.lck" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Crawl_jar/Crawl.jar" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/target/classes/Controller.class" afterPath="$PROJECT_DIR$/Crawl/target/classes/Controller.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/target/classes/Domain/Crawling.class" afterPath="$PROJECT_DIR$/Crawl/target/classes/Domain/Crawling.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/target/classes/MyCrawler.class" afterPath="$PROJECT_DIR$/Crawl/target/classes/MyCrawler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/target/classes/Ranked.class" afterPath="$PROJECT_DIR$/Crawl/target/classes/Ranked.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/src/main/java/Controller.java" afterPath="$PROJECT_DIR$/Crawl/src/main/java/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/src/main/java/Domain/Crawling.java" afterPath="$PROJECT_DIR$/Crawl/src/main/java/Domain/Crawling.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/src/main/java/MyCrawler.java" afterPath="$PROJECT_DIR$/Crawl/src/main/java/MyCrawler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/src/main/java/Ranked.java" afterPath="$PROJECT_DIR$/Crawl/src/main/java/Ranked.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Crawl/src/main/java/Constants.java" afterPath="$PROJECT_DIR$/Crawl/src/main/java/Connect/Constants.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Crawl/src/main/java/DBConnect.java" afterPath="$PROJECT_DIR$/Crawl/src/main/java/Connect/DBConnect.java" />
     </list>
     <ignored path="Crawling.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -928,7 +909,7 @@
       <workItem from="1465547712813" duration="590000" />
       <workItem from="1465565893614" duration="1088000" />
       <workItem from="1465620058587" duration="713000" />
-      <workItem from="1465647855347" duration="3915000" />
+      <workItem from="1465647855347" duration="4015000" />
     </task>
     <task id="LOCAL-00001" summary="PUSH PUSH">
       <created>1463795517062</created>
@@ -951,15 +932,22 @@
       <option name="project" value="LOCAL" />
       <updated>1463912503248</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Finish Crawling">
+      <created>1465719525565</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1465719525565</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185361000" />
+    <option name="totallyTimeSpent" value="185461000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -979,7 +967,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5139116" sideWeight="0.4969743" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5139116" sideWeight="0.4969743" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
