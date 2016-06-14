@@ -1,7 +1,7 @@
 import Connect.DBConnect;
 import Domain.Token;
-import Preprocess.Stoplist;
-import Preprocess.Tokenizer;
+import preprocess.Stoplist;
+import preprocess.Tokenizer;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

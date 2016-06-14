@@ -1,12 +1,12 @@
 import Connect.DBConnect;
 import Domain.Crawling;
 import Domain.Token;
-import Preprocess.Stoplist;
+import preprocess.Stoplist;
 import edu.uci.ics.crawler4j.crawler.Page;
 import edu.uci.ics.crawler4j.crawler.WebCrawler;
 import edu.uci.ics.crawler4j.parser.HtmlParseData;
 import edu.uci.ics.crawler4j.url.WebURL;
-import Preprocess.Tokenizer;
+import preprocess.Tokenizer;
 import javafx.scene.paint.Stop;
 
 import java.sql.ResultSet;

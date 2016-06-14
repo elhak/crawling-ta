@@ -1,4 +1,4 @@
-package Preprocess;
+package preprocess;
 
 import Connect.DBConnect;
 import Domain.Token;
