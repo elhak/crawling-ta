@@ -1,4 +1,4 @@
-package preprocess;
+package Preprocess;
 /*
 
    Porter stemmer in Java. The original paper is in

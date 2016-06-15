@@ -1,18 +1,14 @@
 import Connect.DBConnect;
 import Domain.Crawling;
-import Domain.Token;
-import preprocess.Stoplist;
 import edu.uci.ics.crawler4j.crawler.Page;
 import edu.uci.ics.crawler4j.crawler.WebCrawler;
 import edu.uci.ics.crawler4j.parser.HtmlParseData;
 import edu.uci.ics.crawler4j.url.WebURL;
-import preprocess.Tokenizer;
-import javafx.scene.paint.Stop;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Iterator;
+import java.util.Set;
 import java.util.regex.Pattern;
 
 public class MyCrawler extends WebCrawler {
@@ -38,7 +34,7 @@ public class MyCrawler extends WebCrawler {
             return false;
         }
 
-        // Only accept the url if it is in the "www.ics.uci.edu" domain and protocol is "http".
+        // Only accept the url if it is in the "https://en.wikipedia.org" domain and protocol is "https".
         return href.startsWith("https://en.wikipedia.org");
     }
 
@@ -51,6 +47,7 @@ public class MyCrawler extends WebCrawler {
         WebURL webURL = page.getWebURL();
         boolean isParentExist = false;
         boolean isUrlExist = false;
+        boolean isContentExist = false;
         String title = "";
         String output = "";
 
@@ -66,37 +63,62 @@ public class MyCrawler extends WebCrawler {
         if(page.getParseData() instanceof HtmlParseData){
             HtmlParseData htmlParseData = (HtmlParseData) page.getParseData();
             String text = htmlParseData.getText();
+            int outLink = 0;
+            Set<WebURL> urlList = htmlParseData.getOutgoingUrls();
+
+            for (Iterator<WebURL> urls = urlList.iterator(); urls.hasNext(); ) {
+                WebURL url = urls.next();
+                String href = url.getURL().toLowerCase();
+
+                if (!FILTER.matcher(href).matches()) {
+                    if(!url.getURL().contains("edit")){
+                        outLink++;
+                    }
+                }
+            }
+
             title = htmlParseData.getTitle();
             output = text.replaceAll("[^a-zA-Z ]", " ");
             crawling.setTitle(title);
+            crawling.setOutLinkSize(outLink);
         }
 
         try {
-
-            ResultSet urlSet = db.checkUrl(crawling.getUrl());
-            while (urlSet.next()){
-                crawling.setId(urlSet.getInt("id"));
-                isUrlExist = true;
-            }
-
-            if(!isUrlExist){
-                crawling.setId(db.insertData(crawling));
-                db.insertContent(crawling.getId(), output);
-            }
-
-            if(crawling.getLevel() > 0){
-                ResultSet parentSet = db.checkParent(crawling.getParentUrl());
-                while (parentSet.next()){
-                    crawling.setParentId(parentSet.getInt("id"));
-                    isParentExist = true;
+            if(output.length() > 0){
+                ResultSet rc = db.checkContent(output);
+                while (rc.next()){
+                    crawling.setContentId(rc.getInt("id"));
+                    isContentExist = true;
                 }
 
-                if(!isParentExist){
-                    crawling.setParentId(db.insertParentData(crawling));
+                if(!isContentExist){
+                    crawling.setContentId(db.insertContent(output));
                 }
 
-                if(!db.checkMapper(crawling)){
-                    db.insertMapper(crawling);
+                ResultSet urlSet = db.checkUrl(crawling.getUrl());
+                while (urlSet.next()){
+                    crawling.setId(urlSet.getInt("id"));
+                    isUrlExist = true;
+                }
+
+                if(!isUrlExist){
+                    crawling.setId(db.insertData(crawling));
+                }
+
+                if(crawling.getLevel() > 0){
+                    ResultSet parentSet = db.checkParent(crawling.getParentUrl());
+                    while (parentSet.next()){
+                        crawling.setParentId(parentSet.getInt("id"));
+                        isParentExist = true;
+                    }
+
+                    if(!isParentExist){
+                        crawling.setParentId(db.insertParentData(crawling));
+                    }
+
+                    if(!db.checkMapper(crawling)){
+                        db.insertMapper(crawling);
+                    }
                 }
             }
         } catch (SQLException e) {

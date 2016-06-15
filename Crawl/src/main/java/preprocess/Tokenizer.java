@@ -1,4 +1,4 @@
-package preprocess;
+package Preprocess;
 
 import Domain.Token;
 

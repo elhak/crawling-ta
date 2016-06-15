@@ -16,7 +16,7 @@ import java.util.List;
 public class DBConnect {
     public Connection conn = null;
 
-    private static final Logger logger = LoggerFactory.getLogger(DBConnect.class);
+    private Logger logger = LoggerFactory.getLogger(DBConnect.class);
 
     public DBConnect() {
         try {
@@ -25,7 +25,7 @@ public class DBConnect {
                 String url = "jdbc:mysql://127.0.0.1/tugasakhir_2";
                 conn = DriverManager.getConnection(url, "root", "");
             }else{
-                String url = "jdbc:mysql://31.220.53.30/tugasakhir";
+                String url = "jdbc:mysql://31.220.53.30/tugasakhir_v2";
                 conn = DriverManager.getConnection(url, "hakim", "hakimmarsudi");
             }
 
@@ -43,7 +43,7 @@ public class DBConnect {
     }
 
     public int insertData (Crawling crawling) throws SQLException {
-        String sql = "INSERT INTO crawling_url (domain, url, level, title) values('" + crawling.getDomain() + "', '" + crawling.getUrl() + "', '"+  crawling.getLevel() + "', '"+  crawling.getTitle() +"')";
+        String sql = "INSERT INTO crawling_url (domain, url, level, title, outlink_size, content_id) values('" + crawling.getDomain() + "', '" + crawling.getUrl() + "', '"+  crawling.getLevel() + "', '"+  crawling.getTitle() + "', '"+  crawling.getOutLinkSize() + "', '"+  crawling.getContentId() +"')";
         PreparedStatement st = conn.prepareStatement(sql);
         st.executeUpdate(sql);
         String last_id = "SELECT LAST_INSERT_ID() as id";
@@ -64,12 +64,17 @@ public class DBConnect {
         return rs.getInt("id");
     }
 
+    public ResultSet checkContent(String content) throws SQLException {
+        Statement st = conn.createStatement();
+        String sql = "SELECT * From url_content where content = '" + content + "'";
+        return st.executeQuery(sql);
+    }
+
     public ResultSet checkTerm(String term) throws SQLException {
-        String sql = "SELECT * From term where name = ?";
-        PreparedStatement st = conn.prepareStatement(sql);
-        st.setString(1, term);
+        Statement st = conn.createStatement();
+        String sql = "SELECT * From term where name = '" + term + "'";
         if(Constants.SHOW_SQL) logger.info(sql);
-        return st.executeQuery();
+        return st.executeQuery(sql);
     }
 
     public int insertTerm (Token token) throws SQLException {
@@ -90,15 +95,16 @@ public class DBConnect {
         st.executeUpdate(sql);
     }
 
-    public void insertContent(int url_id, String content) {
-        try {
-            Statement st = conn.createStatement();
-            String sql = "insert into url_content (url_id, content) values('" + url_id + "' , '" + content + "')";
-            if(Constants.SHOW_SQL) logger.info(sql);
-            st.executeUpdate(sql);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+    public int insertContent(String content) throws SQLException {
+        Statement st = conn.createStatement();
+        String sql = "insert into url_content (content) values('" + content + "')";
+        if(Constants.SHOW_SQL) logger.info(sql);
+        st.executeUpdate(sql);
+        String last_id = "SELECT LAST_INSERT_ID() as id";
+        ResultSet rs = st.executeQuery(last_id);
+        rs.next();
+        if(Constants.SHOW_SQL) logger.info(sql);
+        return rs.getInt("id");
     }
 
     public ResultSet checkParent(String parentUrl) throws SQLException {
@@ -175,6 +181,19 @@ public class DBConnect {
         return Double.valueOf(outLink);
     }
 
+    public Double selectOutlinkSize(int urlId) throws SQLException {
+        int outLink = 0;
+        String sql = "select outlink_size from crawling_url where id = "+ urlId;
+        ResultSet rs = runSql(sql);
+        while (rs.next()){
+            outLink = rs.getInt("outlink_size");
+        }
+
+        if(Constants.SHOW_SQL) logger.info(sql);
+
+        return Double.valueOf(outLink);
+    }
+
     public ResultSet selectAllData() throws SQLException {
         String sql = "select cu.id as url_id, cu.url as url, cu.domain as domain, cu.`level` as `level`, cpu.url as parent_url, cpu.id as parent_id from mapping_url_parent_url mpu join crawling_url cu on cu.id = mpu.url_id join crawling_parent_url cpu on cpu.id = mpu.parent_url_id where not exists (select 1 from rank_score where cu.id = url_id)";
         if(Constants.SHOW_SQL) logger.info(sql);
@@ -210,13 +229,13 @@ public class DBConnect {
     }
 
     public ResultSet getContent(int limit, int offset) throws SQLException {
-        String sql = "select * from url_content uc join crawling_url cu on cu.title <> 'null' where uc.extract_status = '0' limit " + limit + " offset " + offset;
+        String sql = "select cu.id as url_id, uc.content as content from url_content uc join crawling_url cu on cu.content_id = uc.id where uc.extract_status = '0' limit " + limit + " offset " + offset;
         return runSql(sql);
     }
 
     public void updateStatus(int url_id){
         try {
-            String sql = "update url_content set extract_status = '1' where url_id = " + url_id;
+            String sql = "update url_content uc join crawling_url cu on cu.content_id = uc.id set uc.extract_status = '1' where cu.id = " + url_id;
             Statement st = conn.createStatement();
             st.executeUpdate(sql);
         } catch (SQLException e) {

@@ -26,55 +26,69 @@ public class Ranked implements Ranking{
     }
 
     public Double inLinkScore(Crawling crawling) {
-        Double inLinkScore;
+        Double inLinkScore = 0.0;
         Double iStart = 0.0;
         Double iNext   = 0.0;
         List<Link> iNextList = new ArrayList<Link>();
         try {
             iStart = db.selectInLink(crawling.getId());
-            iNext = iStart;
             ResultSet resultSet = db.selectByParentId(crawling.getParentId());
             while (resultSet.next()){
                 iNextList.add(new Link(resultSet.getInt("url_id"), db.selectInLink(resultSet.getInt("url_id"))));
             }
 
-            if(iNextList != null){
+            if(!iNextList.isEmpty()){
                 for (Link link : iNextList){
                     iNext = iNext + link.getInlinkValue();
                 }
+            }else{
+                iNext = iStart;
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        inLinkScore = Double.valueOf(iStart / iNext);
+        if(!(iStart == 0.0 && iNext == 0.0)) {
+            inLinkScore = Double.valueOf(iStart / iNext);
+        }
+
+        logger.info("Nilai Start " + iStart);
+        logger.info("Nilai iNext " + iNext);
+        logger.info("Nilai Inlink" + inLinkScore);
 
         return inLinkScore;
     }
 
     public Double outLinkScore(Crawling crawling) {
-        Double outLinkScore;
+        Double outLinkScore = 0.0;
         Double iStart = 0.0;
         Double iNext   = 0.0;
         List<Link> iNextList = new ArrayList<Link>();
         try {
-            iStart = db.selectOutlink(crawling.getId());
-            iNext = iStart;
+            iStart = db.selectOutlinkSize(crawling.getId());
             ResultSet resultSet = db.selectByParentId(crawling.getParentId());
             while (resultSet.next()){
-                iNextList.add(new Link(resultSet.getInt("url_id"), db.selectOutlink(resultSet.getInt("url_id"))));
+                iNextList.add(new Link(resultSet.getInt("url_id"), db.selectOutlinkSize(resultSet.getInt("url_id"))));
             }
 
-            if(iNextList != null){
+            if(!iNextList.isEmpty()){
                 for (Link link : iNextList){
                     iNext = iNext + link.getInlinkValue();
                 }
+            }else{
+                iNext = iStart;
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        outLinkScore = Double.valueOf(iStart / iNext);
+        if(!(iStart == 0.0 && iNext == 0.0)){
+            outLinkScore = Double.valueOf(iStart / iNext);
+        }
+
+        logger.info("Nilai Start " + iStart);
+        logger.info("Nilai iNext " + iNext);
+        logger.info("Nilai Outlink" + outLinkScore);
 
         return outLinkScore;
     }
@@ -114,14 +128,14 @@ public class Ranked implements Ranking{
 
                     ResultSet rankScoreList = db.selectRankScore(crawling.getParentId());
                     while (rankScoreList.next()){
-                        if(Constants.DEBUG) logger.info("parent rank score" + rankScoreList.getDouble("rank_score"));
+                        logger.info("parent rank score" + rankScoreList.getDouble("rank_score"));
                         parentRank = rankScoreList.getDouble("rank_score");
                     }
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
 
-                if(Constants.DEBUG){
+                if(Constants.SHOW_SQL){
                     logger.info("URL Id" + crawling.getId());
                     logger.info("parent value " + parentRank);
                     logger.info("d value " + dampingScore);
@@ -132,7 +146,7 @@ public class Ranked implements Ranking{
                 rankScore = (1 - dampingScore) + dampingScore * parentRank * rank.getInLinkScore() * rank.getOutLinkScore();
                 rank.setRankScore(rankScore);
 
-                if(Constants.DEBUG) logger.info("Rank Score" + rankScore);
+                logger.info("Rank Score" + rankScore);
 
                 try {
                     db.insertRank(rank);

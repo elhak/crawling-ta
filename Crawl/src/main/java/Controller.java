@@ -13,8 +13,31 @@ import java.io.InputStreamReader;
 public class Controller {
 
     public static void main(String[] args) throws Exception {
-        DBConnect dbConnect = new DBConnect();
+        /*String crawlStorageFolder = "data/root";
 
-        System.out.println(dbConnect.inverseFrequencyCounting(2));
+        int numberOfCrawlers = 2;
+
+        CrawlConfig config = new CrawlConfig();
+
+        config.setCrawlStorageFolder(crawlStorageFolder);
+
+        config.setIncludeBinaryContentInCrawling(false);
+
+        config.setResumableCrawling(true);
+
+        PageFetcher pageFetcher = new PageFetcher(config);
+        RobotstxtConfig robotstxtConfig = new RobotstxtConfig();
+        RobotstxtServer robotstxtServer = new RobotstxtServer(robotstxtConfig, pageFetcher);
+        CrawlController controller = new CrawlController(config, pageFetcher, robotstxtServer);
+
+        controller.addSeed("https://en.wikipedia.org/wiki/PageRank");
+
+        controller.start(MyCrawler.class, numberOfCrawlers);*/
+
+        Extraction extraction = new Extraction();
+        extraction.start();
+
+        /*Ranked ranked = new Ranked(0.85);
+        ranked.RankScore();*/
     }
 }

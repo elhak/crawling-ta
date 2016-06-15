@@ -1,8 +1,7 @@
-package preprocess;
+package Preprocess;
 
 import Connect.DBConnect;
 import Domain.Token;
-import org.apache.poi.ss.formula.functions.T;
 
 import java.sql.SQLException;
 import java.util.ArrayList;

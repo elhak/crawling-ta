@@ -10,8 +10,10 @@ public class Crawling {
     private String url;
     private String domain;
     private String parentUrl;
+    private int contentId;
     private int level;
     private int parentId;
+    private int outLinkSize;
 
     public Crawling() {
     }
@@ -70,5 +72,21 @@ public class Crawling {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public int getOutLinkSize() {
+        return outLinkSize;
+    }
+
+    public void setOutLinkSize(int outLinkSize) {
+        this.outLinkSize = outLinkSize;
+    }
+
+    public int getContentId() {
+        return contentId;
+    }
+
+    public void setContentId(int contentId) {
+        this.contentId = contentId;
     }
 }
