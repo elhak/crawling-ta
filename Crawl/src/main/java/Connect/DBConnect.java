@@ -1,6 +1,7 @@
 package Connect;
 
 import Domain.Crawling;
+import Domain.FreqCount;
 import Domain.Rank;
 import Domain.Token;
 import org.slf4j.Logger;
@@ -273,6 +274,32 @@ public class DBConnect {
             idf++;
         }
         return idf;
+    }
+
+    public int getDocumentTotal() throws SQLException {
+        String sql = "select count(*) as total from url_content uc join crawling_url cu on cu.content_id = uc.id";
+        ResultSet resultSet = runSql(sql);
+        resultSet.next();
+        return resultSet.getInt("total");
+    }
+
+    public boolean checkDataFreq(int urlId, int termId) throws SQLException {
+        String sql = "select * from frequency_term_doc where url_id = " + urlId + " and term_id = " + termId;
+        logger.info(sql);
+        ResultSet resultSet = runSql(sql);
+
+        if(resultSet.next()){
+            return true;
+        }
+
+        return false;
+    }
+
+    public void insertFrequency(FreqCount fq) throws SQLException {
+        Statement st = conn.createStatement();
+        String sql = "INSERT INTO frequency_term_doc (url_id, term_id, tf, idf, weight) values('" + fq.getUrlId() + "', '" + fq.getTermId() + "', '" + fq.getTf() + "', '" + fq.getIdf() + "', '" + fq.getWeight() + "')";
+        if(Constants.SHOW_SQL) logger.info(sql);
+        st.executeUpdate(sql);
     }
 
     @Override

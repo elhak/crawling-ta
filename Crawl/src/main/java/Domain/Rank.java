@@ -7,9 +7,9 @@ public class Rank {
     private int urlId;
     private int level;
     private int parentId;
-    private double inLinkScore;
-    private double outLinkScore;
-    private double rankScore;
+    private Double inLinkScore;
+    private Double outLinkScore;
+    private Double rankScore;
 
     public Rank() {
     }
@@ -22,27 +22,27 @@ public class Rank {
         this.urlId = urlId;
     }
 
-    public double getInLinkScore() {
+    public Double getInLinkScore() {
         return inLinkScore;
     }
 
-    public void setInLinkScore(double inLinkScore) {
+    public void setInLinkScore(Double inLinkScore) {
         this.inLinkScore = inLinkScore;
     }
 
-    public double getOutLinkScore() {
+    public Double getOutLinkScore() {
         return outLinkScore;
     }
 
-    public void setOutLinkScore(double outLinkScore) {
+    public void setOutLinkScore(Double outLinkScore) {
         this.outLinkScore = outLinkScore;
     }
 
-    public double getRankScore() {
+    public Double getRankScore() {
         return rankScore;
     }
 
-    public void setRankScore(double rankScore) {
+    public void setRankScore(Double rankScore) {
         this.rankScore = rankScore;
     }
 
