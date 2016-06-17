@@ -295,6 +295,17 @@ public class DBConnect {
         return false;
     }
 
+    public boolean checkDataurl(int urlId) throws SQLException {
+        String sql = "select * from crawling_url cu where (select count(*) from (select * from url_term_mapping where url_id = " + urlId + " group by term_id) as url_term where url_id = " + urlId + " group by url_id) <> (select count(*) from frequency_term_doc where url_id = " + urlId +") and cu.id = " + urlId;
+        logger.info(sql);
+        ResultSet resultSet = runSql(sql);
+
+        if(resultSet.next()){
+            return true;
+        }
+        return false;
+    }
+
     public void insertFrequency(FreqCount fq) throws SQLException {
         Statement st = conn.createStatement();
         String sql = "INSERT INTO frequency_term_doc (url_id, term_id, tf, idf, weight) values('" + fq.getUrlId() + "', '" + fq.getTermId() + "', '" + fq.getTf() + "', '" + fq.getIdf() + "', '" + fq.getWeight() + "')";

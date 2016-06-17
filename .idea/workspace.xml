@@ -10,15 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d738816-ad24-4085-ad07-db8b5acd8d63" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Crawl/src/main/java/Domain/FreqCount.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/target/classes/Connect/DBConnect.class" afterPath="$PROJECT_DIR$/Crawl/target/classes/Connect/DBConnect.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/target/classes/Domain/Rank.class" afterPath="$PROJECT_DIR$/Crawl/target/classes/Domain/Rank.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/target/classes/FrequencyCount.class" afterPath="$PROJECT_DIR$/Crawl/target/classes/FrequencyCount.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/target/classes/Ranked.class" afterPath="$PROJECT_DIR$/Crawl/target/classes/Ranked.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/src/main/java/Connect/DBConnect.java" afterPath="$PROJECT_DIR$/Crawl/src/main/java/Connect/DBConnect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/src/main/java/Controller.java" afterPath="$PROJECT_DIR$/Crawl/src/main/java/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/src/main/java/Domain/Rank.java" afterPath="$PROJECT_DIR$/Crawl/src/main/java/Domain/Rank.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/src/main/java/FrequencyCount.java" afterPath="$PROJECT_DIR$/Crawl/src/main/java/FrequencyCount.java" />
     </list>
     <ignored path="Crawling.iws" />
@@ -45,33 +38,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DBConnect.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DBConnect.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Connect/DBConnect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="297" column="31" selection-start-line="297" selection-start-column="16" selection-end-line="297" selection-end-column="31" />
+            <state relative-caret-position="158">
+              <caret line="299" column="25" selection-start-line="299" selection-start-column="25" selection-end-line="299" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1466042266652" expanded="true" signature="1314:1593" placeholder="INSERT INTO crawling_url... " />
-                <marker date="1466042266652" expanded="true" signature="1712:1741" placeholder="SELECT LAST_... " />
-                <marker date="1466042266652" expanded="true" signature="2043:2122" placeholder="INSERT INTO crawling_parent_url... " />
-                <marker date="1466042266652" expanded="true" signature="2182:2211" placeholder="SELECT LAST_... " />
-                <marker date="1466042266652" expanded="true" signature="2511:2570" placeholder="SELECT * Fro... term" />
-                <marker date="1466042266652" expanded="true" signature="2752:2783" placeholder="SELECT * Fro... term" />
-                <marker date="1466042266652" expanded="true" signature="2752:2784" placeholder="SELECT * Fro... term" />
-                <marker date="1466042266652" expanded="true" signature="2752:2798" placeholder="SELECT * Fro... term" />
-                <marker date="1466042266652" expanded="true" signature="3025:3085" placeholder="INSERT INTO term... " />
-                <marker date="1466042266652" expanded="true" signature="3145:3174" placeholder="SELECT LAST_... " />
-                <marker date="1466042266652" expanded="true" signature="3482:3573" placeholder="insert into url_term_mapping... " />
-                <marker date="1466042266652" expanded="true" signature="3799:3858" placeholder="insert into url_content... " />
-                <marker date="1466042266652" expanded="true" signature="3967:3996" placeholder="SELECT LAST_... " />
-                <marker date="1466042266652" expanded="true" signature="4250:4297" placeholder="SELECT * Fro... crawling_parent_url" />
-                <marker date="1466042266652" expanded="true" signature="4522:4562" placeholder="SELECT * Fro... crawling_url" />
-                <marker date="1466042266652" expanded="true" signature="4871:4946" placeholder="SELECT * Fro... mapping_url_parent_url" />
-                <marker date="1466042266652" expanded="true" signature="5421:5548" placeholder="INSERT INTO mapping_url_parent_url... " />
-                <marker date="1466042266652" expanded="true" signature="8100:8208" placeholder="Insert into rank_score... " />
-                <marker date="1466042266652" expanded="true" signature="9086:9196" placeholder="update url_c... " />
-                <marker date="1466042266652" expanded="true" signature="11227:11421" placeholder="INSERT INTO frequency_term_doc... " />
+                <marker date="1466131922147" expanded="true" signature="1314:1593" placeholder="INSERT INTO crawling_url... " />
+                <marker date="1466131922147" expanded="true" signature="1712:1741" placeholder="SELECT LAST_... " />
+                <marker date="1466131922147" expanded="true" signature="2043:2122" placeholder="INSERT INTO crawling_parent_url... " />
+                <marker date="1466131922147" expanded="true" signature="2182:2211" placeholder="SELECT LAST_... " />
+                <marker date="1466131922147" expanded="true" signature="2511:2570" placeholder="SELECT * Fro... term" />
+                <marker date="1466131922147" expanded="true" signature="2752:2783" placeholder="SELECT * Fro... term" />
+                <marker date="1466131922147" expanded="true" signature="2752:2784" placeholder="SELECT * Fro... term" />
+                <marker date="1466131922147" expanded="true" signature="2752:2798" placeholder="SELECT * Fro... term" />
+                <marker date="1466131922147" expanded="true" signature="3025:3085" placeholder="INSERT INTO term... " />
+                <marker date="1466131922147" expanded="true" signature="3145:3174" placeholder="SELECT LAST_... " />
+                <marker date="1466131922147" expanded="true" signature="3482:3573" placeholder="insert into url_term_mapping... " />
+                <marker date="1466131922147" expanded="true" signature="3799:3858" placeholder="insert into url_content... " />
+                <marker date="1466131922147" expanded="true" signature="3967:3996" placeholder="SELECT LAST_... " />
+                <marker date="1466131922147" expanded="true" signature="4250:4297" placeholder="SELECT * Fro... crawling_parent_url" />
+                <marker date="1466131922147" expanded="true" signature="4522:4562" placeholder="SELECT * Fro... crawling_url" />
+                <marker date="1466131922147" expanded="true" signature="4871:4946" placeholder="SELECT * Fro... mapping_url_parent_url" />
+                <marker date="1466131922147" expanded="true" signature="5421:5548" placeholder="INSERT INTO mapping_url_parent_url... " />
+                <marker date="1466131922147" expanded="true" signature="8100:8208" placeholder="Insert into rank_score... " />
+                <marker date="1466131922147" expanded="true" signature="9086:9196" placeholder="update url_c... " />
+                <marker date="1466131922147" expanded="true" signature="11769:11963" placeholder="INSERT INTO frequency_term_doc... " />
               </folding>
             </state>
           </provider>
@@ -80,8 +73,8 @@
       <file leaf-file-name="FrequencyCount.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/FrequencyCount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state relative-caret-position="99">
+              <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+            <state relative-caret-position="336">
+              <caret line="34" column="47" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -114,9 +107,11 @@
       <file leaf-file-name="Extraction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Extraction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
+            <state relative-caret-position="323">
               <caret line="26" column="44" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="44" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,9 +119,13 @@
       <file leaf-file-name="Ranked.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Ranked.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
+            <state relative-caret-position="2380">
               <caret line="153" column="40" selection-start-line="153" selection-start-column="40" selection-end-line="153" selection-end-column="40" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#568#569#0" expanded="false" />
+                <element signature="e#616#617#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -200,8 +199,8 @@
         <option value="$PROJECT_DIR$/Crawl/src/main/java/Ranked.java" />
         <option value="$PROJECT_DIR$/Crawl/src/main/java/Domain/FreqCount.java" />
         <option value="$PROJECT_DIR$/Crawl/src/main/java/Controller.java" />
-        <option value="$PROJECT_DIR$/Crawl/src/main/java/Connect/DBConnect.java" />
         <option value="$PROJECT_DIR$/Crawl/src/main/java/FrequencyCount.java" />
+        <option value="$PROJECT_DIR$/Crawl/src/main/java/Connect/DBConnect.java" />
       </list>
     </option>
   </component>
@@ -255,9 +254,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -374,6 +370,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -905,7 +904,9 @@
       <workItem from="1465976680646" duration="4167000" />
       <workItem from="1465984407832" duration="2120000" />
       <workItem from="1465995594696" duration="590000" />
-      <workItem from="1466001119211" duration="17569000" />
+      <workItem from="1466001119211" duration="17571000" />
+      <workItem from="1466071017958" duration="91000" />
+      <workItem from="1466122533395" duration="3488000" />
     </task>
     <task id="LOCAL-00001" summary="PUSH PUSH">
       <created>1463795517062</created>
@@ -946,7 +947,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230319000" />
+    <option name="totallyTimeSpent" value="233900000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1370" height="735" extended-state="0" />
@@ -954,7 +955,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54318935" sideWeight="0.49394855" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5415282" sideWeight="0.49394855" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5531915" sideWeight="0.5060514" order="7" side_tool="true" content_ui="tabs" />
@@ -970,7 +971,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46179402" sideWeight="0.4969743" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4651163" sideWeight="0.4969743" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -995,7 +996,8 @@
     <MESSAGE value="PUSH PUSH" />
     <MESSAGE value="Finish Crawling" />
     <MESSAGE value="pack" />
-    <option name="LAST_COMMIT_MESSAGE" value="pack" />
+    <MESSAGE value="Check Data URL" />
+    <option name="LAST_COMMIT_MESSAGE" value="Check Data URL" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1012,9 +1014,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1040,9 +1039,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1292">
           <caret line="92" column="17" selection-start-line="92" selection-start-column="17" selection-end-line="92" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1082,9 +1078,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="49" column="48" selection-start-line="49" selection-start-column="48" selection-end-line="49" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1204,7 +1197,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="39" column="10" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1212,7 +1204,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1220,7 +1211,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1228,10 +1218,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
           <caret line="88" column="28" selection-start-line="88" selection-start-column="16" selection-end-line="88" selection-end-column="28" />
-          <folding>
-            <element signature="e#1575#1576#0" expanded="false" />
-            <element signature="e#1617#1618#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1239,12 +1225,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
           <caret line="44" column="35" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
-          <folding>
-            <element signature="e#527#528#0" expanded="false" />
-            <element signature="e#573#574#0" expanded="false" />
-            <element signature="e#869#870#0" expanded="false" />
-            <element signature="e#911#912#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1252,17 +1232,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
           <caret line="89" column="59" selection-start-line="89" selection-start-column="59" selection-end-line="89" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Ranked.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="153" column="40" selection-start-line="153" selection-start-column="40" selection-end-line="153" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1276,87 +1245,80 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Extraction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
+        <state relative-caret-position="323">
           <caret line="26" column="44" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="44" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Ranked.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2380">
+          <caret line="153" column="40" selection-start-line="153" selection-start-column="40" selection-end-line="153" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#568#569#0" expanded="false" />
+            <element signature="e#616#617#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Domain/FreqCount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="99">
           <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-          <folding>
-            <element signature="e#376#377#0" expanded="true" />
-            <element signature="e#404#405#0" expanded="true" />
-            <element signature="e#443#444#0" expanded="true" />
-            <element signature="e#477#478#0" expanded="true" />
-            <element signature="e#507#508#0" expanded="true" />
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#577#578#0" expanded="true" />
-            <element signature="e#613#614#0" expanded="true" />
-            <element signature="e#639#640#0" expanded="true" />
-            <element signature="e#664#665#0" expanded="true" />
-            <element signature="e#697#698#0" expanded="true" />
-            <element signature="e#725#726#0" expanded="true" />
-            <element signature="e#752#753#0" expanded="true" />
-            <element signature="e#778#779#0" expanded="true" />
-            <element signature="e#813#814#0" expanded="true" />
-            <element signature="e#843#844#0" expanded="true" />
-            <element signature="e#875#876#0" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#947#948#0" expanded="true" />
-            <element signature="e#983#984#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Connect/DBConnect.java">
+    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
-          <caret line="297" column="31" selection-start-line="297" selection-start-column="16" selection-end-line="297" selection-end-column="31" />
+          <caret line="34" column="47" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1466042266652" expanded="true" signature="1314:1593" placeholder="INSERT INTO crawling_url... " />
-            <marker date="1466042266652" expanded="true" signature="1712:1741" placeholder="SELECT LAST_... " />
-            <marker date="1466042266652" expanded="true" signature="2043:2122" placeholder="INSERT INTO crawling_parent_url... " />
-            <marker date="1466042266652" expanded="true" signature="2182:2211" placeholder="SELECT LAST_... " />
-            <marker date="1466042266652" expanded="true" signature="2511:2570" placeholder="SELECT * Fro... term" />
-            <marker date="1466042266652" expanded="true" signature="2752:2783" placeholder="SELECT * Fro... term" />
-            <marker date="1466042266652" expanded="true" signature="2752:2784" placeholder="SELECT * Fro... term" />
-            <marker date="1466042266652" expanded="true" signature="2752:2798" placeholder="SELECT * Fro... term" />
-            <marker date="1466042266652" expanded="true" signature="3025:3085" placeholder="INSERT INTO term... " />
-            <marker date="1466042266652" expanded="true" signature="3145:3174" placeholder="SELECT LAST_... " />
-            <marker date="1466042266652" expanded="true" signature="3482:3573" placeholder="insert into url_term_mapping... " />
-            <marker date="1466042266652" expanded="true" signature="3799:3858" placeholder="insert into url_content... " />
-            <marker date="1466042266652" expanded="true" signature="3967:3996" placeholder="SELECT LAST_... " />
-            <marker date="1466042266652" expanded="true" signature="4250:4297" placeholder="SELECT * Fro... crawling_parent_url" />
-            <marker date="1466042266652" expanded="true" signature="4522:4562" placeholder="SELECT * Fro... crawling_url" />
-            <marker date="1466042266652" expanded="true" signature="4871:4946" placeholder="SELECT * Fro... mapping_url_parent_url" />
-            <marker date="1466042266652" expanded="true" signature="5421:5548" placeholder="INSERT INTO mapping_url_parent_url... " />
-            <marker date="1466042266652" expanded="true" signature="8100:8208" placeholder="Insert into rank_score... " />
-            <marker date="1466042266652" expanded="true" signature="9086:9196" placeholder="update url_c... " />
-            <marker date="1466042266652" expanded="true" signature="11227:11421" placeholder="INSERT INTO frequency_term_doc... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/FrequencyCount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state relative-caret-position="99">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Controller.java">
+    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Connect/DBConnect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+        <state relative-caret-position="158">
+          <caret line="299" column="25" selection-start-line="299" selection-start-column="25" selection-end-line="299" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1466131922147" expanded="true" signature="1314:1593" placeholder="INSERT INTO crawling_url... " />
+            <marker date="1466131922147" expanded="true" signature="1712:1741" placeholder="SELECT LAST_... " />
+            <marker date="1466131922147" expanded="true" signature="2043:2122" placeholder="INSERT INTO crawling_parent_url... " />
+            <marker date="1466131922147" expanded="true" signature="2182:2211" placeholder="SELECT LAST_... " />
+            <marker date="1466131922147" expanded="true" signature="2511:2570" placeholder="SELECT * Fro... term" />
+            <marker date="1466131922147" expanded="true" signature="2752:2783" placeholder="SELECT * Fro... term" />
+            <marker date="1466131922147" expanded="true" signature="2752:2784" placeholder="SELECT * Fro... term" />
+            <marker date="1466131922147" expanded="true" signature="2752:2798" placeholder="SELECT * Fro... term" />
+            <marker date="1466131922147" expanded="true" signature="3025:3085" placeholder="INSERT INTO term... " />
+            <marker date="1466131922147" expanded="true" signature="3145:3174" placeholder="SELECT LAST_... " />
+            <marker date="1466131922147" expanded="true" signature="3482:3573" placeholder="insert into url_term_mapping... " />
+            <marker date="1466131922147" expanded="true" signature="3799:3858" placeholder="insert into url_content... " />
+            <marker date="1466131922147" expanded="true" signature="3967:3996" placeholder="SELECT LAST_... " />
+            <marker date="1466131922147" expanded="true" signature="4250:4297" placeholder="SELECT * Fro... crawling_parent_url" />
+            <marker date="1466131922147" expanded="true" signature="4522:4562" placeholder="SELECT * Fro... crawling_url" />
+            <marker date="1466131922147" expanded="true" signature="4871:4946" placeholder="SELECT * Fro... mapping_url_parent_url" />
+            <marker date="1466131922147" expanded="true" signature="5421:5548" placeholder="INSERT INTO mapping_url_parent_url... " />
+            <marker date="1466131922147" expanded="true" signature="8100:8208" placeholder="Insert into rank_score... " />
+            <marker date="1466131922147" expanded="true" signature="9086:9196" placeholder="update url_c... " />
+            <marker date="1466131922147" expanded="true" signature="11769:11963" placeholder="INSERT INTO frequency_term_doc... " />
           </folding>
         </state>
       </provider>

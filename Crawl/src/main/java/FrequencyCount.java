@@ -30,25 +30,27 @@ public class FrequencyCount {
                 crawling.setId(rs.getInt("id"));
                 crawling.setUrl(rs.getString("url"));
 
-                ResultSet fq = dbConnect.frequencyCounting(crawling.getId());
-                while (fq.next()){
-                    int termId = fq.getInt("term_id");
-                    if(!dbConnect.checkDataFreq(crawling.getId(), termId)){
-                        int idf = dbConnect.inverseFrequencyCounting(termId);
-                        FreqCount freqCount = new FreqCount();
-                        freqCount.setUrlId(crawling.getId());
-                        freqCount.setTermId(termId);
-                        freqCount.setIdf(idf);
-                        freqCount.setTf(fq.getInt("tf"));
-                        freqCount.setWeight(calculateTfIdfFrequency(freqCount, nDoc));
+                if(dbConnect.checkDataurl(crawling.getId())) {
+                    ResultSet fq = dbConnect.frequencyCounting(crawling.getId());
+                    while (fq.next()){
+                        int termId = fq.getInt("term_id");
+                        if(!dbConnect.checkDataFreq(crawling.getId(), termId)){
+                            int idf = dbConnect.inverseFrequencyCounting(termId);
+                            FreqCount freqCount = new FreqCount();
+                            freqCount.setUrlId(crawling.getId());
+                            freqCount.setTermId(termId);
+                            freqCount.setIdf(idf);
+                            freqCount.setTf(fq.getInt("tf"));
+                            freqCount.setWeight(calculateTfIdfFrequency(freqCount, nDoc));
 
-                        logger.info("URL" + freqCount.getUrlId());
-                        logger.info("Term " + freqCount.getTermId());
-                        logger.info("Weigh " + freqCount.getWeight());
-                        logger.info("TF " + freqCount.getTf());
-                        logger.info("IDF " + freqCount.getIdf());
+                            logger.info("URL" + freqCount.getUrlId());
+                            logger.info("Term " + freqCount.getTermId());
+                            logger.info("Weigh " + freqCount.getWeight());
+                            logger.info("TF " + freqCount.getTf());
+                            logger.info("IDF " + freqCount.getIdf());
 
-                        dbConnect.insertFrequency(freqCount);
+                            dbConnect.insertFrequency(freqCount);
+                        }
                     }
                 }
             }
