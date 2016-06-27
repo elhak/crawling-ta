@@ -19,6 +19,7 @@ public class Stoplist {
     private DBConnect db = new DBConnect();
 
     public List<Token> checkToken(List<Token> tokenList){
+        System.out.println("Filtering");
         List<String> stopList = new ArrayList<String>();
         List<Token> newTokenList = new ArrayList<Token>();
         try {
@@ -31,12 +32,10 @@ public class Stoplist {
             for (int i = 0; i < tokenList.size(); i++) {
                 Token tn = tokenList.get(i);
                 if(!stopList.contains(tn.getContent())){
-                    if(tn.getContent().length() > 1){
-                        PorterStemmer ps = new PorterStemmer(tn.getContent());
-                        ps.stem();
-                        tn.setContent(ps.toString());
-                        newTokenList.add(tn);
-                    }
+                    PorterStemmer ps = new PorterStemmer(tn.getContent());
+                    ps.stem();
+                    tn.setContent(ps.toString());
+                    newTokenList.add(tn);
                 }
             }
         }

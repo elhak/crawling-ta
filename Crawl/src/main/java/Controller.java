@@ -1,14 +1,8 @@
-import Connect.DBConnect;
 import edu.uci.ics.crawler4j.crawler.CrawlConfig;
 import edu.uci.ics.crawler4j.crawler.CrawlController;
 import edu.uci.ics.crawler4j.fetcher.PageFetcher;
 import edu.uci.ics.crawler4j.robotstxt.RobotstxtConfig;
 import edu.uci.ics.crawler4j.robotstxt.RobotstxtServer;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 
 public class Controller {
 
@@ -34,13 +28,13 @@ public class Controller {
 
         controller.start(MyCrawler.class, numberOfCrawlers);*/
 
-        /*Extraction extraction = new Extraction();
-        extraction.start();*/
+        Extraction extraction = new Extraction();
+        extraction.start();
 
         /*Ranked ranked = new Ranked(0.85);
         ranked.RankScore();*/
 
-        FrequencyCount frequencyCount = new FrequencyCount();
-        frequencyCount.startCounting();
+        /*FrequencyCount frequencyCount = new FrequencyCount();
+        frequencyCount.startCounting();*/
     }
 }

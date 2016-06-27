@@ -94,8 +94,6 @@ public class Ranked implements Ranking{
     }
 
     public void RankScore() {
-        List<Crawling> crawlingList = new ArrayList<Crawling>();
-
         try {
             ResultSet resultSet = db.selectAllData();
             while (resultSet.next()){
@@ -106,15 +104,7 @@ public class Ranked implements Ranking{
                 crawling.setLevel(resultSet.getInt("level"));
                 crawling.setParentId(resultSet.getInt("parent_id"));
                 crawling.setParentUrl(resultSet.getString("parent_url"));
-                crawlingList.add(crawling);
-            }
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        if(crawlingList != null){
-            for (Crawling crawling : crawlingList){
                 double rankScore;
                 double parentRank = 0.0;
                 Rank rank = new Rank();
@@ -124,15 +114,10 @@ public class Ranked implements Ranking{
                 rank.setOutLinkScore(outLinkScore(crawling));
                 rank.setParentId(crawling.getParentId());
 
-                try {
-
-                    ResultSet rankScoreList = db.selectRankScore(crawling.getParentId());
-                    while (rankScoreList.next()){
-                        logger.info("parent rank score" + rankScoreList.getDouble("rank_score"));
-                        parentRank = rankScoreList.getDouble("rank_score");
-                    }
-                } catch (SQLException e) {
-                    e.printStackTrace();
+                ResultSet rankScoreList = db.selectRankScore(crawling.getParentId());
+                while (rankScoreList.next()){
+                    logger.info("parent rank score" + rankScoreList.getDouble("rank_score"));
+                    parentRank = rankScoreList.getDouble("rank_score");
                 }
 
                 if(Constants.SHOW_SQL){
@@ -148,12 +133,11 @@ public class Ranked implements Ranking{
 
                 logger.info("Rank Score" + rankScore);
 
-                try {
-                    db.insertRank(rank);
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
+                db.insertRank(rank);
             }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 }

@@ -1,4 +1,5 @@
 import Connect.DBConnect;
+import Domain.FreqCount;
 import Domain.Token;
 import Preprocess.Stoplist;
 import Preprocess.Tokenizer;
@@ -24,44 +25,53 @@ public class Extraction{
         try {
             int total = db.getTotalContent();
             for (int i = 0; i < total;) {
-                ResultSet rs = db.getContent(1, i);
+                ResultSet rs = db.getContent(5, i);
                 while (rs.next()){
-                    Ekstrak(rs.getInt("url_id"), rs.getString("content"));
+                    Ekstrak(rs.getInt("id"), rs.getString("content"));
                 }
 
-                i = i + 2;
+                i = i + 5;
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    private void Ekstrak(int url_id, String input){
+    private void Ekstrak(int id, String input) throws SQLException {
         Tokenizer tokenizer = new Tokenizer();
         List<Token> tokenList = tokenizer.Token(input);
 
         if(!tokenList.isEmpty()){
             List<Token> out = stoplist.checkToken(tokenList);
+            int i = 0;
             for (Token token : out){
                 boolean isTokenExist = false;
-                try {
-                    ResultSet termSet = db.checkTerm(token.getContent());
-                    while (termSet.next()){
-                        token.setId(termSet.getInt("id"));
-                        isTokenExist = true;
-                    }
+                ResultSet termSet = db.checkTerm(token.getContent());
+                while (termSet.next()){
+                    token.setId(termSet.getInt("id"));
+                    isTokenExist = true;
+                }
 
-                    if(!isTokenExist){
-                        token.setId(db.insertTerm(token));
-                    }
-
-                    db.insertTermMapper(token.getId(), url_id);
-                } catch (SQLException e) {
-                    e.printStackTrace();
+                if(!isTokenExist){
+                    token.setId(db.insertTerm(token));
                 }
             }
 
-            db.updateStatus(url_id);
+            ResultSet urlList = db.getUrlByContent(id);
+            while (urlList.next()){
+                for (Token tok : out){
+                    FreqCount freqCount = new FreqCount();
+                    freqCount.setUrlId(urlList.getInt("id"));
+                    freqCount.setTermId(tok.getId());
+                    freqCount.setTf(tok.getStringFreq());
+
+                    if(!db.checkTf(freqCount)){
+                        db.insertTf(freqCount);
+                    }
+                }
+            }
+
+            db.updateStatus(id);
         }
     }
 }

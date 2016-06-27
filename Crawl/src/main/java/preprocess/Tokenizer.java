@@ -1,10 +1,11 @@
 package Preprocess;
 
 import Domain.Token;
+import com.google.common.collect.HashMultiset;
+import com.google.common.collect.Multiset;
+import com.google.common.collect.Multisets;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.StringTokenizer;
+import java.util.*;
 
 /**
  * Created by Hakim on 06-Jun-16.
@@ -21,6 +22,7 @@ public class Tokenizer {
     public List<Token> Token(String output){
         List<Token> tokenList = new ArrayList<Token>();
         StringTokenizer stringTokenizer = new StringTokenizer(output.toLowerCase());
+        Multiset<String> tokenSet = HashMultiset.create();
         while(stringTokenizer.hasMoreTokens()){
             String newString = stringTokenizer.nextToken();
             while((output.length() > 0) && startsWithPunctuation(newString)){
@@ -31,8 +33,12 @@ public class Tokenizer {
             }
             newString = newString.trim();
             if((output.length() > 0)){
-                tokenList.add(new Token(newString, 1));
+                tokenSet.add(newString);
             }
+        }
+
+        for (Multiset.Entry<String> token : tokenSet.entrySet()){
+            tokenList.add(new Token(token.getElement(), token.getCount()));
         }
 
         return tokenList;

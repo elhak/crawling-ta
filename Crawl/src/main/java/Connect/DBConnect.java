@@ -26,8 +26,8 @@ public class DBConnect {
                 String url = "jdbc:mysql://127.0.0.1/tugasakhir_2";
                 conn = DriverManager.getConnection(url, "root", "");
             }else{
-                String url = "jdbc:mysql://31.220.53.30/tugasakhir_v2";
-                conn = DriverManager.getConnection(url, "hakim", "hakimmarsudi");
+                String url = "jdbc:mysql://195.110.59.7/tugasakhir";
+                conn = DriverManager.getConnection(url, "root", "root");
             }
 
             System.out.println("conn built");
@@ -195,7 +195,8 @@ public class DBConnect {
         return Double.valueOf(outLink);
     }
 
-    public ResultSet selectAllData() throws SQLException {
+//    Old Method
+    /*public ResultSet selectAllData() throws SQLException {
         String sql = "select cu.id as url_id, cu.url as url, cu.domain as domain, cu.`level` as `level`, cpu.url as parent_url, cpu.id as parent_id from mapping_url_parent_url mpu join crawling_url cu on cu.id = mpu.url_id join crawling_parent_url cpu on cpu.id = mpu.parent_url_id where not exists (select 1 from rank_score where cu.id = url_id)";
         if(Constants.SHOW_SQL) logger.info(sql);
         return runSql(sql);
@@ -212,6 +213,26 @@ public class DBConnect {
         String sql = "Insert into rank_score (url_id, rank_score) values('" + rank.getUrlId() + "', '" + rank.getRankScore() + "')";
         if(Constants.SHOW_SQL) logger.info(sql);
         st.executeUpdate(sql);
+    }*/
+
+
+    public ResultSet selectAllData() throws SQLException {
+        String sql = "select cu.id as url_id, cu.url as url, cu.domain as domain, cu.`level` as `level`, cpu.url as parent_url, cpu.id as parent_id, cu.rank_score as rank_score from mapping_url_parent_url mpu join crawling_url cu on cu.id = mpu.url_id join crawling_parent_url cpu on cpu.id = mpu.parent_url_id where cu.rank_score = 0";
+        if(Constants.SHOW_SQL) logger.info(sql);
+        return runSql(sql);
+    }
+
+    public ResultSet selectRankScore(int urlId) throws SQLException {
+        String sql = "select * from crawling_url where id = " + urlId;
+        logger.info(sql);
+        return runSql(sql);
+    }
+
+    public void insertRank(Rank rank) throws SQLException {
+        Statement st = conn.createStatement();
+        String sql = "UPDATE crawling_url SET rank_score = '" + rank.getRankScore() + "' WHERE id = " + rank.getUrlId();
+        if(Constants.SHOW_SQL) logger.info(sql);
+        st.executeUpdate(sql);
     }
 
     public List<String> getStopList() throws SQLException {
@@ -223,20 +244,40 @@ public class DBConnect {
 
         while (rs.next()){
             String words = rs.getString("text");
-            list.add(words);
+            list.add(words.trim());
         }
 
         return list;
     }
+/*
+    public ResultSet getContent(int limit, int offset) throws SQLException {
+        String sql = "select cu.id as url_id, uc.content as content, uc.id as content_id from crawling_url cu join url_content uc on uc.id = cu.content_id where uc.extract_status = '0' limit " + limit + " offset " + offset;
+        return runSql(sql);
+    }*/
 
     public ResultSet getContent(int limit, int offset) throws SQLException {
-        String sql = "select cu.id as url_id, uc.content as content from url_content uc join crawling_url cu on cu.content_id = uc.id where uc.extract_status = '0' limit " + limit + " offset " + offset;
+        String sql = "select * from url_content where extract_status = '0' limit " + limit + " offset " + offset;
         return runSql(sql);
     }
 
-    public void updateStatus(int url_id){
+    public ResultSet getUrlByContent(int contentId) throws SQLException {
+        String sql = "select id from crawling_url where content_id = " + contentId;
+        return runSql(sql);
+    }
+
+    /*public void updateStatus(int url_id){
         try {
             String sql = "update url_content uc join crawling_url cu on cu.content_id = uc.id set uc.extract_status = '1' where cu.id = " + url_id;
+            Statement st = conn.createStatement();
+            st.executeUpdate(sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }*/
+
+    public void updateStatus(int id){
+        try {
+            String sql = "update url_content set extract_status = '1' where id = " + id;
             Statement st = conn.createStatement();
             st.executeUpdate(sql);
         } catch (SQLException e) {
@@ -258,6 +299,21 @@ public class DBConnect {
         }
 
         return total;
+    }
+
+    public void deleteExtract(int urlid){
+        try {
+            String sq = "select * from url_term_mapping where url_id = " + urlid;
+            ResultSet rs = runSql(sq);
+            if(rs.next()){
+                Statement st = conn.createStatement();
+                String sql = "delete from url_term_mapping where url_id = " + urlid;
+                if(Constants.SHOW_SQL) logger.info(sql);
+                st.executeUpdate(sql);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
 //    Frequency Count
@@ -311,6 +367,23 @@ public class DBConnect {
         String sql = "INSERT INTO frequency_term_doc (url_id, term_id, tf, idf, weight) values('" + fq.getUrlId() + "', '" + fq.getTermId() + "', '" + fq.getTf() + "', '" + fq.getIdf() + "', '" + fq.getWeight() + "')";
         if(Constants.SHOW_SQL) logger.info(sql);
         st.executeUpdate(sql);
+    }
+
+    public void insertTf(FreqCount fq) throws SQLException {
+        Statement st = conn.createStatement();
+        String sql = "INSERT INTO frequency_term_doc (url_id, term_id, tf) values('" + fq.getUrlId() + "', '" + fq.getTermId() + "', '" + fq.getTf() + "')";
+        if(Constants.SHOW_SQL) logger.info(sql);
+        st.executeUpdate(sql);
+    }
+
+    public boolean checkTf(FreqCount fq) throws SQLException {
+        String sql = "select * from frequency_term_doc where url_id = " + fq.getUrlId() + " and term_id = " + fq.getTermId();
+        ResultSet rs = runSql(sql);
+        if(rs.next()){
+            return true;
+        }
+
+        return false;
     }
 
     @Override

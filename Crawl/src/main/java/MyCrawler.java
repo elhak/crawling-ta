@@ -1,9 +1,12 @@
+import Connect.Constants;
 import Connect.DBConnect;
 import Domain.Crawling;
 import edu.uci.ics.crawler4j.crawler.Page;
 import edu.uci.ics.crawler4j.crawler.WebCrawler;
 import edu.uci.ics.crawler4j.parser.HtmlParseData;
 import edu.uci.ics.crawler4j.url.WebURL;
+import org.jsoup.Jsoup;
+import org.jsoup.safety.Whitelist;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -79,8 +82,11 @@ public class MyCrawler extends WebCrawler {
 
             title = htmlParseData.getTitle();
             output = text.replaceAll("[^a-zA-Z ]", " ");
+            output = Jsoup.clean(output, Whitelist.basic());
             crawling.setTitle(title);
             crawling.setOutLinkSize(outLink);
+
+            if(Constants.DEBUG) logger.info(MyCrawler.class + "Output " + output);
         }
 
         try {
