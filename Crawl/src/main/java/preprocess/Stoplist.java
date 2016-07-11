@@ -32,10 +32,12 @@ public class Stoplist {
             for (int i = 0; i < tokenList.size(); i++) {
                 Token tn = tokenList.get(i);
                 if(!stopList.contains(tn.getContent())){
-                    PorterStemmer ps = new PorterStemmer(tn.getContent());
-                    ps.stem();
-                    tn.setContent(ps.toString());
-                    newTokenList.add(tn);
+                    if(tn.getContent().length() < 100){
+                        PorterStemmer ps = new PorterStemmer(tn.getContent());
+                        ps.stem();
+                        tn.setContent(ps.toString());
+                        newTokenList.add(tn);
+                    }
                 }
             }
         }

@@ -22,34 +22,37 @@ public class FrequencyCount {
     public void startCounting(){
         try {
             int nDoc = dbConnect.getDocumentTotal();
-            ResultSet rs = dbConnect.selectAll();
-            while (rs.next()){
-                Crawling crawling = new Crawling();
-                crawling.setId(rs.getInt("id"));
-                crawling.setUrl(rs.getString("url"));
+            int offset = 0;
+            boolean finish = false;
 
-                if(dbConnect.checkDataurl(crawling.getId())) {
-                    ResultSet fq = dbConnect.frequencyCounting(crawling.getId());
-                    while (fq.next()){
-                        int termId = fq.getInt("term_id");
-                        if(!dbConnect.checkDataFreq(crawling.getId(), termId)){
-                            int idf = dbConnect.inverseFrequencyCounting(termId);
-                            FreqCount freqCount = new FreqCount();
-                            freqCount.setUrlId(crawling.getId());
-                            freqCount.setTermId(termId);
-                            freqCount.setIdf(idf);
-                            freqCount.setTf(fq.getInt("tf"));
-                            freqCount.setWeight(calculateTfIdfFrequency(freqCount, nDoc));
+            while (!finish){
+                ResultSet rs = dbConnect.getFtDocument(offset);
+                if(!rs.next()){
+                    finish = true;
+                }else{
+                    do{
+                        Crawling crawling = new Crawling();
+                        crawling.setId(rs.getInt("url_id"));
+                        int termId = rs.getInt("term_id");
 
-                            logger.info("URL" + freqCount.getUrlId());
-                            logger.info("Term " + freqCount.getTermId());
-                            logger.info("Weigh " + freqCount.getWeight());
-                            logger.info("TF " + freqCount.getTf());
-                            logger.info("IDF " + freqCount.getIdf());
+                        int idf = dbConnect.inverseFrequencyCounting(termId);
+                        FreqCount freqCount = new FreqCount();
+                        freqCount.setUrlId(crawling.getId());
+                        freqCount.setTermId(termId);
+                        freqCount.setIdf(idf);
+                        freqCount.setTf(rs.getInt("tf"));
+                        freqCount.setWeight(calculateTfIdfFrequency(freqCount, nDoc));
 
-                            dbConnect.insertFrequency(freqCount);
-                        }
-                    }
+                        logger.info("URL" + freqCount.getUrlId());
+                        logger.info("Term " + freqCount.getTermId());
+                        logger.info("Weigh " + freqCount.getWeight());
+                        logger.info("TF " + freqCount.getTf());
+                        logger.info("IDF " + freqCount.getIdf());
+
+                        dbConnect.updateWeight(freqCount);
+                    } while (rs.next());
+
+                    offset = offset + 10;
                 }
             }
         } catch (SQLException e) {

@@ -28,13 +28,13 @@ public class Controller {
 
         controller.start(MyCrawler.class, numberOfCrawlers);*/
 
-        Extraction extraction = new Extraction();
-        extraction.start();
+        /*Extraction extraction = new Extraction();
+        extraction.start();*/
 
         /*Ranked ranked = new Ranked(0.85);
         ranked.RankScore();*/
 
-        /*FrequencyCount frequencyCount = new FrequencyCount();
-        frequencyCount.startCounting();*/
+        FrequencyCount frequencyCount = new FrequencyCount();
+        frequencyCount.startCounting();
     }
 }

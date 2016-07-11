@@ -323,11 +323,11 @@ public class DBConnect {
     }
 
     public int inverseFrequencyCounting(int termId) throws SQLException{
-        String sql = "select * from url_term_mapping where term_id = " + termId + " group by url_id";
+        int idf = 0;
+        String sql = "select count(*) as idf from frequency_term_doc where term_id = " + termId;
         ResultSet rs = runSql(sql);
-        int idf  = 0;
-        while (rs.next()){
-            idf++;
+        if(rs.next()){
+            idf = rs.getInt("idf");
         }
         return idf;
     }
@@ -337,6 +337,11 @@ public class DBConnect {
         ResultSet resultSet = runSql(sql);
         resultSet.next();
         return resultSet.getInt("total");
+    }
+
+    public ResultSet getFtDocument(int offset) throws SQLException {
+        String sql = "Select * from frequency_term_doc where weight = 0 and idf = 0 limit 10 offset " + offset;
+        return runSql(sql);
     }
 
     public boolean checkDataFreq(int urlId, int termId) throws SQLException {
@@ -365,6 +370,13 @@ public class DBConnect {
     public void insertFrequency(FreqCount fq) throws SQLException {
         Statement st = conn.createStatement();
         String sql = "INSERT INTO frequency_term_doc (url_id, term_id, tf, idf, weight) values('" + fq.getUrlId() + "', '" + fq.getTermId() + "', '" + fq.getTf() + "', '" + fq.getIdf() + "', '" + fq.getWeight() + "')";
+        if(Constants.SHOW_SQL) logger.info(sql);
+        st.executeUpdate(sql);
+    }
+
+    public void updateWeight(FreqCount fq) throws SQLException {
+        Statement st = conn.createStatement();
+        String sql = "UPDATE frequency_term_doc set idf = " + fq.getIdf() + ", weight = " + fq.getWeight() + " where term_id = " + fq.getTermId() + " and url_id = " + fq.getUrlId();
         if(Constants.SHOW_SQL) logger.info(sql);
         st.executeUpdate(sql);
     }
