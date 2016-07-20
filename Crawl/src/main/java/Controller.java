@@ -4,37 +4,57 @@ import edu.uci.ics.crawler4j.fetcher.PageFetcher;
 import edu.uci.ics.crawler4j.robotstxt.RobotstxtConfig;
 import edu.uci.ics.crawler4j.robotstxt.RobotstxtServer;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 public class Controller {
 
     public static void main(String[] args) throws Exception {
-        /*String crawlStorageFolder = "data/root";
 
-        int numberOfCrawlers = 2;
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        CrawlConfig config = new CrawlConfig();
+        System.out.print("Enter something:");
+        System.out.println("1. Crawler");
+        System.out.println("2. Ekstraksi");
+        System.out.println("3. PageRank");
+        System.out.println("4. Freq Counting");
+        int input = Integer.parseInt(br.readLine());
 
-        config.setCrawlStorageFolder(crawlStorageFolder);
+        switch (input){
+            case 1 :
+                String crawlStorageFolder = "data/root";
 
-        config.setIncludeBinaryContentInCrawling(false);
+                int numberOfCrawlers = 2;
 
-        config.setResumableCrawling(true);
+                CrawlConfig config = new CrawlConfig();
 
-        PageFetcher pageFetcher = new PageFetcher(config);
-        RobotstxtConfig robotstxtConfig = new RobotstxtConfig();
-        RobotstxtServer robotstxtServer = new RobotstxtServer(robotstxtConfig, pageFetcher);
-        CrawlController controller = new CrawlController(config, pageFetcher, robotstxtServer);
+                config.setCrawlStorageFolder(crawlStorageFolder);
 
-        controller.addSeed("https://en.wikipedia.org/wiki/PageRank");
+                config.setIncludeBinaryContentInCrawling(false);
 
-        controller.start(MyCrawler.class, numberOfCrawlers);*/
+                config.setResumableCrawling(true);
 
-        /*Extraction extraction = new Extraction();
-        extraction.start();*/
+                PageFetcher pageFetcher = new PageFetcher(config);
+                RobotstxtConfig robotstxtConfig = new RobotstxtConfig();
+                RobotstxtServer robotstxtServer = new RobotstxtServer(robotstxtConfig, pageFetcher);
+                CrawlController controller = new CrawlController(config, pageFetcher, robotstxtServer);
 
-        /*Ranked ranked = new Ranked(0.85);
-        ranked.RankScore();*/
+                controller.addSeed("https://en.wikipedia.org/wiki/PageRank");
 
-        FrequencyCount frequencyCount = new FrequencyCount();
-        frequencyCount.startCounting();
+                controller.start(MyCrawler.class, numberOfCrawlers);
+                break;
+            case 2 :
+                Extraction extraction = new Extraction();
+                extraction.start();
+                break;
+            case 3 :
+                Ranked ranked = new Ranked(0.85);
+                ranked.RankScore();
+                break;
+            case 4 :
+                FrequencyCount frequencyCount = new FrequencyCount();
+                frequencyCount.startCounting();
+                break;
+        }
     }
 }
