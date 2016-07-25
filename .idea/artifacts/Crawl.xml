@@ -7,6 +7,7 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/Crawl/lib/crawler4j-4.1-jar-with-dependencies.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/Crawl/lib/jsoup-1.8.3.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/Crawl/lib/slf4j-simple-1.7.21.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Crawl/lib/Jama-1.0.3.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

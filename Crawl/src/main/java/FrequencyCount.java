@@ -1,5 +1,5 @@
 import Connect.DBConnect;
-import Domain.Crawling;
+import Domain.Doc;
 import Domain.FreqCount;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,7 +31,7 @@ public class FrequencyCount {
                     finish = true;
                 }else{
                     do{
-                        Crawling crawling = new Crawling();
+                        Doc crawling = new Doc();
                         crawling.setId(rs.getInt("url_id"));
                         int termId = rs.getInt("term_id");
 

@@ -1,3 +1,4 @@
+import Connect.DBConnect;
 import edu.uci.ics.crawler4j.crawler.CrawlConfig;
 import edu.uci.ics.crawler4j.crawler.CrawlController;
 import edu.uci.ics.crawler4j.fetcher.PageFetcher;
@@ -7,9 +8,13 @@ import edu.uci.ics.crawler4j.robotstxt.RobotstxtServer;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+import Math.*;
+
 public class Controller {
 
     public static void main(String[] args) throws Exception {
+
+        DBConnect dbConnect = new DBConnect();
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -18,6 +23,7 @@ public class Controller {
         System.out.println("2. Ekstraksi");
         System.out.println("3. PageRank");
         System.out.println("4. Freq Counting");
+        System.out.println("5. Weight Cosine");
         int input = Integer.parseInt(br.readLine());
 
         switch (input){
@@ -55,6 +61,9 @@ public class Controller {
                 FrequencyCount frequencyCount = new FrequencyCount();
                 frequencyCount.startCounting();
                 break;
+            case 5 :
+                SVDCalculation svdCalculation = new SVDCalculation(dbConnect);
+                svdCalculation.calculate();
         }
     }
 }

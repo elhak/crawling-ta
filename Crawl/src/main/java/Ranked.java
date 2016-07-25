@@ -1,6 +1,6 @@
 import Connect.Constants;
 import Connect.DBConnect;
-import Domain.Crawling;
+import Domain.Doc;
 import Domain.Link;
 import Domain.Rank;
 import org.slf4j.Logger;
@@ -25,7 +25,7 @@ public class Ranked implements Ranking{
         this.dampingScore = dampingScore;
     }
 
-    public Double inLinkScore(Crawling crawling) {
+    public Double inLinkScore(Doc crawling) {
         Double inLinkScore = 0.0;
         Double iStart = 0.0;
         Double iNext   = 0.0;
@@ -59,7 +59,7 @@ public class Ranked implements Ranking{
         return inLinkScore;
     }
 
-    public Double outLinkScore(Crawling crawling) {
+    public Double outLinkScore(Doc crawling) {
         Double outLinkScore = 0.0;
         Double iStart = 0.0;
         Double iNext   = 0.0;
@@ -97,7 +97,7 @@ public class Ranked implements Ranking{
         try {
             ResultSet resultSet = db.selectAllData();
             while (resultSet.next()){
-                Crawling crawling = new Crawling();
+                Doc crawling = new Doc();
                 crawling.setId(resultSet.getInt("url_id"));
                 crawling.setUrl(resultSet.getString("url"));
                 crawling.setDomain(resultSet.getString("domain"));

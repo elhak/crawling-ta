@@ -3,7 +3,7 @@ package Domain;
 /**
  * Created by Hakim on 21-May-16.
  */
-public class Crawling {
+public class Doc {
 
     private int id;
     private String title;
@@ -15,7 +15,7 @@ public class Crawling {
     private int parentId;
     private int outLinkSize;
 
-    public Crawling() {
+    public Doc() {
     }
 
     public int getId() {

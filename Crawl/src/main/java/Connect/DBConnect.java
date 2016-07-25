@@ -1,6 +1,6 @@
 package Connect;
 
-import Domain.Crawling;
+import Domain.Doc;
 import Domain.FreqCount;
 import Domain.Rank;
 import Domain.Token;
@@ -22,13 +22,8 @@ public class DBConnect {
     public DBConnect() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            if(Constants.DEBUG){
-                String url = "jdbc:mysql://127.0.0.1/tugasakhir_2";
-                conn = DriverManager.getConnection(url, "root", "");
-            }else{
-                String url = "jdbc:mysql://195.110.59.7/tugasakhir";
-                conn = DriverManager.getConnection(url, "root", "root");
-            }
+            String url = "jdbc:mysql://127.0.0.1/dev_tugasakhir_4";
+            conn = DriverManager.getConnection(url, "root", "");
 
             System.out.println("conn built");
         } catch (SQLException e) {
@@ -43,7 +38,67 @@ public class DBConnect {
         return sta.executeQuery(sql);
     }
 
-    public int insertData (Crawling crawling) throws SQLException {
+    public List<Token> getTokenList(){
+        List<Token> tokenList = new ArrayList<Token>();
+        String sql = "select * from term order by id limit 2000 offset 2000";
+        try {
+            ResultSet rs = runSql(sql);
+            while (rs.next()){
+                Token tok = new Token();
+                tok.setId(rs.getInt("id"));
+                tok.setContent(rs.getString("name"));
+                tokenList.add(tok);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return tokenList;
+    }
+
+    public List<Doc> getDocList(){
+        List<Doc> docList = new ArrayList<Doc>();
+        String sql = "select * from crawling_url group by title order by id limit 200 offset 200";
+        try {
+            ResultSet rs = runSql(sql);
+            while (rs.next()){
+                Doc d = new Doc();
+                d.setId(rs.getInt("id"));
+                docList.add(d);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return docList;
+    }
+
+    public float getWeight(int urlId, int termId){
+        float val = 0;
+        String sql = "select * from frequency_term_doc where url_id = '" + urlId + "' and term_id = '" + termId + "'";
+        try {
+            ResultSet rs = runSql(sql);
+            if(rs.next()){
+                val = rs.getInt("weight");
+            }
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        return val;
+    }
+
+    public void insertSimilarity(int urlId1, int urlId2, float weight){
+        String sql = "REPLACE INTO doc_similarity (url_id_1, url_id_2, similarity) VALUES (" + urlId1 + "," + urlId2 + "," + weight +")";
+        try {
+            runSql(sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public int insertData (Doc crawling) throws SQLException {
         String sql = "INSERT INTO crawling_url (domain, url, level, title, outlink_size, content_id) values('" + crawling.getDomain() + "', '" + crawling.getUrl() + "', '"+  crawling.getLevel() + "', '"+  crawling.getTitle() + "', '"+  crawling.getOutLinkSize() + "', '"+  crawling.getContentId() +"')";
         PreparedStatement st = conn.prepareStatement(sql);
         st.executeUpdate(sql);
@@ -54,7 +109,7 @@ public class DBConnect {
         return rs.getInt("id");
     }
 
-    public int insertParentData (Crawling crawling) throws SQLException {
+    public int insertParentData (Doc crawling) throws SQLException {
         Statement st = conn.createStatement();
         String sql = "INSERT INTO crawling_parent_url (url) values('" + crawling.getParentUrl() + "')";
         st.executeUpdate(sql);
@@ -123,7 +178,7 @@ public class DBConnect {
         return st.executeQuery();
     }
 
-    public boolean checkMapper(Crawling crawling) throws SQLException {
+    public boolean checkMapper(Doc crawling) throws SQLException {
         boolean isExist = false;
         String sql = "SELECT * From mapping_url_parent_url where url_id = ? and parent_url_id = ?";
         PreparedStatement st = conn.prepareStatement(sql);
@@ -138,7 +193,7 @@ public class DBConnect {
     }
 
 
-    public int insertMapper (Crawling crawling) throws SQLException {
+    public int insertMapper (Doc crawling) throws SQLException {
         Statement st = conn.createStatement();
         String sql = "INSERT INTO mapping_url_parent_url (url_id, parent_url_id) values('" + crawling.getId() + "', '" + crawling.getParentId() + "')";
         if(Constants.SHOW_SQL) logger.info(sql);

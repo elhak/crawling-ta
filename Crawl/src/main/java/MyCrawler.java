@@ -1,6 +1,6 @@
 import Connect.Constants;
 import Connect.DBConnect;
-import Domain.Crawling;
+import Domain.Doc;
 import edu.uci.ics.crawler4j.crawler.Page;
 import edu.uci.ics.crawler4j.crawler.WebCrawler;
 import edu.uci.ics.crawler4j.parser.HtmlParseData;
@@ -57,7 +57,7 @@ public class MyCrawler extends WebCrawler {
         logger.info("URL: {}", webURL.getURL());
         logger.info("Parent URL: {}", webURL.getParentUrl());
 
-        Crawling crawling = new Crawling();
+        Doc crawling = new Doc();
         crawling.setUrl(webURL.getURL());
         crawling.setDomain(webURL.getDomain());
         crawling.setLevel(webURL.getDepth());
