@@ -19,7 +19,7 @@ public class MyCrawler extends WebCrawler {
     private DBConnect db = new DBConnect();
 
     private static final Pattern FILTER = Pattern.compile(".*(\\.(css|js|gif|jpg|jpeg"
-                                                                        + "|png|mp3|mp3|zip|gz))$");
+                                                                        + "|png|mp3|mp3|zip|gz|svg))$");
 
     /**
      * You should implement this function to specify whether the given url
@@ -33,12 +33,17 @@ public class MyCrawler extends WebCrawler {
             return false;
         }
 
-        if(url.getURL().contains("edit")){
+        if(url.getURL().contains("edit") || url.getURL().contains("Special:BookSources")){
             return false;
         }
 
+        if(href.startsWith("http://www.bbc.com/news") || href.startsWith("https://en.wikipedia.org/wiki/") || href.startsWith("http://www.popularmechanics.com/technology/")){
+            return true;
+        }
+
         // Only accept the url if it is in the "https://en.wikipedia.org" domain and protocol is "https".
-        return href.startsWith("https://en.wikipedia.org");
+//        return href.startsWith("https://en.wikipedia.org");
+        return false;
     }
 
     /**

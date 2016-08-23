@@ -22,7 +22,7 @@ public class DBConnect {
     public DBConnect() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://127.0.0.1/dev_tugasakhir_4";
+            String url = "jdbc:mysql://127.0.0.1/dev_tugasakhir_6";
             conn = DriverManager.getConnection(url, "root", "");
 
             System.out.println("conn built");
@@ -40,7 +40,7 @@ public class DBConnect {
 
     public List<Token> getTokenList(){
         List<Token> tokenList = new ArrayList<Token>();
-        String sql = "select * from term order by id limit 2000 offset 2000";
+        String sql = "select * from term order by id limit 1000";
         try {
             ResultSet rs = runSql(sql);
             while (rs.next()){
@@ -58,7 +58,7 @@ public class DBConnect {
 
     public List<Doc> getDocList(){
         List<Doc> docList = new ArrayList<Doc>();
-        String sql = "select * from crawling_url group by title order by id limit 200 offset 200";
+        String sql = "select * from crawling_url group by title order by id limit 100";
         try {
             ResultSet rs = runSql(sql);
             while (rs.next()){
