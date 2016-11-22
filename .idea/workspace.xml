@@ -10,14 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d738816-ad24-4085-ad07-db8b5acd8d63" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Crawl/src/main/java/Math/Permutation.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Crawl/Counting.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Crawl/Crawl.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Crawl/Rank.jar" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/target/classes/Connect/DBConnect.class" afterPath="$PROJECT_DIR$/Crawl/target/classes/Connect/DBConnect.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/target/classes/Controller.class" afterPath="$PROJECT_DIR$/Crawl/target/classes/Controller.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/target/classes/MyCrawler.class" afterPath="$PROJECT_DIR$/Crawl/target/classes/MyCrawler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/target/classes/Math/SVDCalculation.class" afterPath="$PROJECT_DIR$/Crawl/target/classes/Math/SVDCalculation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/root/frontier/00000000.jdb" afterPath="$PROJECT_DIR$/data/root/frontier/00000000.jdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Crawl/Ekstraksi.jar" afterPath="$PROJECT_DIR$/out/artifacts/Crawl/Ekstraksi.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Crawl.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Crawl.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/src/main/java/Connect/DBConnect.java" afterPath="$PROJECT_DIR$/Crawl/src/main/java/Connect/DBConnect.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/src/main/java/Controller.java" afterPath="$PROJECT_DIR$/Crawl/src/main/java/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/src/main/java/MyCrawler.java" afterPath="$PROJECT_DIR$/Crawl/src/main/java/MyCrawler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Crawl/src/main/java/Math/SVDCalculation.java" afterPath="$PROJECT_DIR$/Crawl/src/main/java/Math/SVDCalculation.java" />
     </list>
     <ignored path="Crawling.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,12 +47,51 @@
     <favorites_list name="Crawling" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+    <leaf>
+      <file leaf-file-name="DBConnect.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Connect/DBConnect.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding>
+                <marker date="1476342156795" expanded="true" signature="3068:3347" placeholder="INSERT INTO crawling_url... " />
+                <marker date="1476342156795" expanded="true" signature="3466:3495" placeholder="SELECT LAST_... " />
+                <marker date="1476342156795" expanded="true" signature="3792:3871" placeholder="INSERT INTO crawling_parent_url... " />
+                <marker date="1476342156795" expanded="true" signature="3931:3960" placeholder="SELECT LAST_... " />
+                <marker date="1476342156795" expanded="true" signature="4260:4319" placeholder="SELECT * Fro... term" />
+                <marker date="1476342156795" expanded="true" signature="4501:4532" placeholder="SELECT * Fro... term" />
+                <marker date="1476342156795" expanded="true" signature="4501:4533" placeholder="SELECT * Fro... term" />
+                <marker date="1476342156795" expanded="true" signature="4501:4547" placeholder="SELECT * Fro... term" />
+                <marker date="1476342156795" expanded="true" signature="4774:4834" placeholder="INSERT INTO term... " />
+                <marker date="1476342156795" expanded="true" signature="4894:4923" placeholder="SELECT LAST_... " />
+                <marker date="1476342156795" expanded="true" signature="5231:5322" placeholder="insert into url_term_mapping... " />
+                <marker date="1476342156795" expanded="true" signature="5548:5607" placeholder="insert into url_content... " />
+                <marker date="1476342156795" expanded="true" signature="5716:5745" placeholder="SELECT LAST_... " />
+                <marker date="1476342156795" expanded="true" signature="5999:6046" placeholder="SELECT * Fro... crawling_parent_url" />
+                <marker date="1476342156795" expanded="true" signature="6271:6311" placeholder="SELECT * Fro... crawling_url" />
+                <marker date="1476342156795" expanded="true" signature="6615:6690" placeholder="SELECT * Fro... mapping_url_parent_url" />
+                <marker date="1476342156795" expanded="true" signature="7160:7287" placeholder="INSERT INTO mapping_url_parent_url... " />
+                <marker date="1476342156795" expanded="true" signature="10870:10889" placeholder="UPDATE crawl... " />
+                <marker date="1476342156795" expanded="true" signature="10870:10908" placeholder="UPDATE crawl... " />
+                <marker date="1476342156795" expanded="true" signature="10870:10936" placeholder="UPDATE crawl... " />
+                <marker date="1476342156795" expanded="true" signature="10870:10947" placeholder="UPDATE crawl... " />
+                <marker date="1476342156795" expanded="true" signature="10870:10948" placeholder="UPDATE crawl... " />
+                <marker date="1476342156795" expanded="true" signature="12297:12407" placeholder="update url_c... " />
+                <marker date="1476342156795" expanded="true" signature="12670:12725" placeholder="update url_c... " />
+                <marker date="1476342156795" expanded="true" signature="13645:13689" placeholder="delete from " />
+                <marker date="1476342156795" expanded="true" signature="16056:16250" placeholder="INSERT INTO frequency_term_doc... " />
+                <marker date="1476342156795" expanded="true" signature="16474:16615" placeholder="UPDATE frequ... " />
+                <marker date="1476342156795" expanded="true" signature="16851:16983" placeholder="INSERT INTO frequency_term_doc... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="59" column="50" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
+            <state relative-caret-position="160">
+              <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,80 +99,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SVDCalculation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Math/SVDCalculation.java">
+      <file leaf-file-name="Extraction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Extraction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+            <state relative-caret-position="158">
+              <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBConnect.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Connect/DBConnect.java">
+      <file leaf-file-name="Tokenizer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Preprocess/Tokenizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+            <state relative-caret-position="245">
+              <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
               <folding>
-                <marker date="1471919902964" expanded="true" signature="2936:3215" placeholder="INSERT INTO crawling_url... " />
-                <marker date="1471919902964" expanded="true" signature="3334:3363" placeholder="SELECT LAST_... " />
-                <marker date="1471919902964" expanded="true" signature="3660:3739" placeholder="INSERT INTO crawling_parent_url... " />
-                <marker date="1471919902964" expanded="true" signature="3799:3828" placeholder="SELECT LAST_... " />
-                <marker date="1471919902964" expanded="true" signature="4128:4187" placeholder="SELECT * Fro... term" />
-                <marker date="1471919902964" expanded="true" signature="4369:4400" placeholder="SELECT * Fro... term" />
-                <marker date="1471919902964" expanded="true" signature="4369:4401" placeholder="SELECT * Fro... term" />
-                <marker date="1471919902964" expanded="true" signature="4369:4415" placeholder="SELECT * Fro... term" />
-                <marker date="1471919902964" expanded="true" signature="4642:4702" placeholder="INSERT INTO term... " />
-                <marker date="1471919902964" expanded="true" signature="4762:4791" placeholder="SELECT LAST_... " />
-                <marker date="1471919902964" expanded="true" signature="5099:5190" placeholder="insert into url_term_mapping... " />
-                <marker date="1471919902964" expanded="true" signature="5416:5475" placeholder="insert into url_content... " />
-                <marker date="1471919902964" expanded="true" signature="5584:5613" placeholder="SELECT LAST_... " />
-                <marker date="1471919902964" expanded="true" signature="5867:5914" placeholder="SELECT * Fro... crawling_parent_url" />
-                <marker date="1471919902964" expanded="true" signature="6139:6179" placeholder="SELECT * Fro... crawling_url" />
-                <marker date="1471919902964" expanded="true" signature="6483:6558" placeholder="SELECT * Fro... mapping_url_parent_url" />
-                <marker date="1471919902964" expanded="true" signature="7028:7155" placeholder="INSERT INTO mapping_url_parent_url... " />
-                <marker date="1471919902964" expanded="true" signature="10738:10757" placeholder="UPDATE crawl... " />
-                <marker date="1471919902964" expanded="true" signature="10738:10776" placeholder="UPDATE crawl... " />
-                <marker date="1471919902964" expanded="true" signature="10738:10804" placeholder="UPDATE crawl... " />
-                <marker date="1471919902964" expanded="true" signature="10738:10815" placeholder="UPDATE crawl... " />
-                <marker date="1471919902964" expanded="true" signature="10738:10816" placeholder="UPDATE crawl... " />
-                <marker date="1471919902964" expanded="true" signature="12165:12275" placeholder="update url_c... " />
-                <marker date="1471919902964" expanded="true" signature="12538:12593" placeholder="update url_c... " />
-                <marker date="1471919902964" expanded="true" signature="13513:13557" placeholder="delete from " />
-                <marker date="1471919902964" expanded="true" signature="15924:16118" placeholder="INSERT INTO frequency_term_doc... " />
-                <marker date="1471919902964" expanded="true" signature="16342:16483" placeholder="UPDATE frequ... " />
-                <marker date="1471919902964" expanded="true" signature="16719:16851" placeholder="INSERT INTO frequency_term_doc... " />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyCrawler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/MyCrawler.java">
+      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Connect/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="55" column="38" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ranked.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Ranked.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1530">
-              <caret line="103" column="48" selection-start-line="103" selection-start-column="48" selection-end-line="103" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Vectors.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Math/Vectors.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="48" column="43" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="43" />
+            <state relative-caret-position="153">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -196,7 +193,6 @@
         <option value="$PROJECT_DIR$/Crawl/src/main/java/Domain/Link.java" />
         <option value="$PROJECT_DIR$/Crawl/src/main/java/Domain/Rank.java" />
         <option value="$PROJECT_DIR$/Crawl/src/main/java/Domain/FreqCount.java" />
-        <option value="$PROJECT_DIR$/Crawl/src/main/java/Connect/Constants.java" />
         <option value="$PROJECT_DIR$/Crawl/src/main/java/CheckArray.java" />
         <option value="$PROJECT_DIR$/Crawl/src/main/java/Ranked.java" />
         <option value="$PROJECT_DIR$/Crawl/src/main/java/Preprocess/Tokenizer.java" />
@@ -205,11 +201,12 @@
         <option value="$PROJECT_DIR$/Crawl/src/main/java/FrequencyCount.java" />
         <option value="$PROJECT_DIR$/Crawl/src/main/java/Math/Vectors.java" />
         <option value="$PROJECT_DIR$/Crawl/src/main/java/Math/MatrixReduce.java" />
-        <option value="$PROJECT_DIR$/Crawl/src/main/java/Math/SVDCalculation.java" />
         <option value="$PROJECT_DIR$/Crawl/src/main/java/Math/Permutation.java" />
         <option value="$PROJECT_DIR$/Crawl/src/main/java/MyCrawler.java" />
-        <option value="$PROJECT_DIR$/Crawl/src/main/java/Controller.java" />
+        <option value="$PROJECT_DIR$/Crawl/src/main/java/Math/SVDCalculation.java" />
         <option value="$PROJECT_DIR$/Crawl/src/main/java/Connect/DBConnect.java" />
+        <option value="$PROJECT_DIR$/Crawl/src/main/java/Connect/Constants.java" />
+        <option value="$PROJECT_DIR$/Crawl/src/main/java/Controller.java" />
       </list>
     </option>
   </component>
@@ -270,6 +267,10 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Crawling" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -376,9 +377,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -392,13 +393,13 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Crawl/lib/Jama-1.0.3.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Crawl/lib/guava-19.0.jar!/" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="crawling" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Bahan JTK/Tugas/Semester 8/Tugas Akhir/Crawl/Crawl/src/main/java/DBConnect.java" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalDependencies" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
@@ -936,6 +937,16 @@
       <workItem from="1471717108161" duration="767000" />
       <workItem from="1471916763890" duration="1626000" />
       <workItem from="1471919820441" duration="1432000" />
+      <workItem from="1471960732570" duration="1290000" />
+      <workItem from="1471974956087" duration="691000" />
+      <workItem from="1472003780223" duration="1902000" />
+      <workItem from="1472043178146" duration="283000" />
+      <workItem from="1472043864133" duration="3336000" />
+      <workItem from="1473216857399" duration="1409000" />
+      <workItem from="1473731870867" duration="7231000" />
+      <workItem from="1475259825207" duration="2658000" />
+      <workItem from="1476335890516" duration="1741000" />
+      <workItem from="1476340006546" duration="3300000" />
     </task>
     <task id="LOCAL-00001" summary="PUSH PUSH">
       <created>1463795517062</created>
@@ -990,7 +1001,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="319901000" />
+    <option name="totallyTimeSpent" value="343742000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -998,13 +1009,12 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.53104573" sideWeight="0.49394855" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5237316" sideWeight="0.49394855" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5531915" sideWeight="0.5060514" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59738135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1014,12 +1024,13 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56792146" sideWeight="0.4969743" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56792146" sideWeight="0.4969743" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59738135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1054,8 +1065,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Crawl.java" />
-    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/BasicCrawler.java" />
     <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/BasicCrawlController.java" />
     <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Main.java" />
     <entry file="jar://D:/crawler4j-4.1-jar-with-dependencies.jar!/edu/uci/ics/crawler4j/parser/HtmlParseData.class" />
@@ -1161,24 +1170,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Preprocess/Tokenizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="39" column="65" selection-start-line="39" selection-start-column="65" selection-end-line="39" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Preprocess/Stoplist.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="431">
           <caret line="35" column="61" selection-start-line="35" selection-start-column="61" selection-end-line="35" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Connect/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -1239,14 +1234,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Math/Vectors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="43" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Math/Permutation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -1261,26 +1248,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Ranked.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="103" column="48" selection-start-line="103" selection-start-column="48" selection-end-line="103" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/Crawl/lib/crawler4j-4.1-jar-with-dependencies.jar!/edu/uci/ics/crawler4j/crawler/CrawlConfig.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="76" column="16" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/MyCrawler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="55" column="38" selection-start-line="55" selection-start-column="38" selection-end-line="55" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1291,65 +1262,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Extraction.java">
+    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Math/SVDCalculation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="71" column="13" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
+        <state relative-caret-position="243">
+          <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Controller.java">
+    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Ranked.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="59" column="50" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="549">
+          <caret line="103" column="48" selection-start-line="103" selection-start-column="48" selection-end-line="103" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Math/SVDCalculation.java">
+    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Math/Vectors.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+        <state relative-caret-position="549">
+          <caret line="48" column="43" selection-start-line="48" selection-start-column="37" selection-end-line="48" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/MyCrawler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/Crawl/lib/crawler4j-4.1-jar-with-dependencies.jar!/org/slf4j/Logger.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Connect/DBConnect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+        <state relative-caret-position="136">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <marker date="1471919902964" expanded="true" signature="2936:3215" placeholder="INSERT INTO crawling_url... " />
-            <marker date="1471919902964" expanded="true" signature="3334:3363" placeholder="SELECT LAST_... " />
-            <marker date="1471919902964" expanded="true" signature="3660:3739" placeholder="INSERT INTO crawling_parent_url... " />
-            <marker date="1471919902964" expanded="true" signature="3799:3828" placeholder="SELECT LAST_... " />
-            <marker date="1471919902964" expanded="true" signature="4128:4187" placeholder="SELECT * Fro... term" />
-            <marker date="1471919902964" expanded="true" signature="4369:4400" placeholder="SELECT * Fro... term" />
-            <marker date="1471919902964" expanded="true" signature="4369:4401" placeholder="SELECT * Fro... term" />
-            <marker date="1471919902964" expanded="true" signature="4369:4415" placeholder="SELECT * Fro... term" />
-            <marker date="1471919902964" expanded="true" signature="4642:4702" placeholder="INSERT INTO term... " />
-            <marker date="1471919902964" expanded="true" signature="4762:4791" placeholder="SELECT LAST_... " />
-            <marker date="1471919902964" expanded="true" signature="5099:5190" placeholder="insert into url_term_mapping... " />
-            <marker date="1471919902964" expanded="true" signature="5416:5475" placeholder="insert into url_content... " />
-            <marker date="1471919902964" expanded="true" signature="5584:5613" placeholder="SELECT LAST_... " />
-            <marker date="1471919902964" expanded="true" signature="5867:5914" placeholder="SELECT * Fro... crawling_parent_url" />
-            <marker date="1471919902964" expanded="true" signature="6139:6179" placeholder="SELECT * Fro... crawling_url" />
-            <marker date="1471919902964" expanded="true" signature="6483:6558" placeholder="SELECT * Fro... mapping_url_parent_url" />
-            <marker date="1471919902964" expanded="true" signature="7028:7155" placeholder="INSERT INTO mapping_url_parent_url... " />
-            <marker date="1471919902964" expanded="true" signature="10738:10757" placeholder="UPDATE crawl... " />
-            <marker date="1471919902964" expanded="true" signature="10738:10776" placeholder="UPDATE crawl... " />
-            <marker date="1471919902964" expanded="true" signature="10738:10804" placeholder="UPDATE crawl... " />
-            <marker date="1471919902964" expanded="true" signature="10738:10815" placeholder="UPDATE crawl... " />
-            <marker date="1471919902964" expanded="true" signature="10738:10816" placeholder="UPDATE crawl... " />
-            <marker date="1471919902964" expanded="true" signature="12165:12275" placeholder="update url_c... " />
-            <marker date="1471919902964" expanded="true" signature="12538:12593" placeholder="update url_c... " />
-            <marker date="1471919902964" expanded="true" signature="13513:13557" placeholder="delete from " />
-            <marker date="1471919902964" expanded="true" signature="15924:16118" placeholder="INSERT INTO frequency_term_doc... " />
-            <marker date="1471919902964" expanded="true" signature="16342:16483" placeholder="UPDATE frequ... " />
-            <marker date="1471919902964" expanded="true" signature="16719:16851" placeholder="INSERT INTO frequency_term_doc... " />
+            <marker date="1476342156795" expanded="true" signature="3068:3347" placeholder="INSERT INTO crawling_url... " />
+            <marker date="1476342156795" expanded="true" signature="3466:3495" placeholder="SELECT LAST_... " />
+            <marker date="1476342156795" expanded="true" signature="3792:3871" placeholder="INSERT INTO crawling_parent_url... " />
+            <marker date="1476342156795" expanded="true" signature="3931:3960" placeholder="SELECT LAST_... " />
+            <marker date="1476342156795" expanded="true" signature="4260:4319" placeholder="SELECT * Fro... term" />
+            <marker date="1476342156795" expanded="true" signature="4501:4532" placeholder="SELECT * Fro... term" />
+            <marker date="1476342156795" expanded="true" signature="4501:4533" placeholder="SELECT * Fro... term" />
+            <marker date="1476342156795" expanded="true" signature="4501:4547" placeholder="SELECT * Fro... term" />
+            <marker date="1476342156795" expanded="true" signature="4774:4834" placeholder="INSERT INTO term... " />
+            <marker date="1476342156795" expanded="true" signature="4894:4923" placeholder="SELECT LAST_... " />
+            <marker date="1476342156795" expanded="true" signature="5231:5322" placeholder="insert into url_term_mapping... " />
+            <marker date="1476342156795" expanded="true" signature="5548:5607" placeholder="insert into url_content... " />
+            <marker date="1476342156795" expanded="true" signature="5716:5745" placeholder="SELECT LAST_... " />
+            <marker date="1476342156795" expanded="true" signature="5999:6046" placeholder="SELECT * Fro... crawling_parent_url" />
+            <marker date="1476342156795" expanded="true" signature="6271:6311" placeholder="SELECT * Fro... crawling_url" />
+            <marker date="1476342156795" expanded="true" signature="6615:6690" placeholder="SELECT * Fro... mapping_url_parent_url" />
+            <marker date="1476342156795" expanded="true" signature="7160:7287" placeholder="INSERT INTO mapping_url_parent_url... " />
+            <marker date="1476342156795" expanded="true" signature="10870:10889" placeholder="UPDATE crawl... " />
+            <marker date="1476342156795" expanded="true" signature="10870:10908" placeholder="UPDATE crawl... " />
+            <marker date="1476342156795" expanded="true" signature="10870:10936" placeholder="UPDATE crawl... " />
+            <marker date="1476342156795" expanded="true" signature="10870:10947" placeholder="UPDATE crawl... " />
+            <marker date="1476342156795" expanded="true" signature="10870:10948" placeholder="UPDATE crawl... " />
+            <marker date="1476342156795" expanded="true" signature="12297:12407" placeholder="update url_c... " />
+            <marker date="1476342156795" expanded="true" signature="12670:12725" placeholder="update url_c... " />
+            <marker date="1476342156795" expanded="true" signature="13645:13689" placeholder="delete from " />
+            <marker date="1476342156795" expanded="true" signature="16056:16250" placeholder="INSERT INTO frequency_term_doc... " />
+            <marker date="1476342156795" expanded="true" signature="16474:16615" placeholder="UPDATE frequ... " />
+            <marker date="1476342156795" expanded="true" signature="16851:16983" placeholder="INSERT INTO frequency_term_doc... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Extraction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/Crawl/lib/crawler4j-4.1-jar-with-dependencies.jar!/com/google/common/collect/Multiset.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Preprocess/Tokenizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Connect/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Crawl/src/main/java/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

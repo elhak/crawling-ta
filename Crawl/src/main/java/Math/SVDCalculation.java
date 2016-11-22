@@ -43,6 +43,7 @@ public class SVDCalculation {
         int nRowCol = matrixtfidf.getColumnDimension();
         int i = 0;
         int j = i + 1;
+        matrixtfidf = null;
         while (i < nRowCol) {
             float[] vectorA = vector.getRowVector(matrixVS, i);
             Doc doc1 = docList.get(i);

@@ -19,7 +19,10 @@ public class Controller {
 
         DBConnect dbConnect = new DBConnect();
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        SVDCalculation svdCalculation = new SVDCalculation(dbConnect);
+        svdCalculation.calculate();
+
+        /*BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.print("Enter something:");
         System.out.println("1. Crawler");
@@ -31,6 +34,10 @@ public class Controller {
 
         switch (input){
             case 1 :
+
+                System.out.print("Enter Seed:");
+                String seed = br.readLine();
+
                 String crawlStorageFolder = "data/root";
 
                 int numberOfCrawlers = 2;
@@ -43,16 +50,16 @@ public class Controller {
 
                 config.setIncludeBinaryContentInCrawling(false);
 
-                config.setResumableCrawling(true);
+                config.setResumableCrawling(false);
+
+                config.setMaxPagesToFetch(1000);
 
                 PageFetcher pageFetcher = new PageFetcher(config);
                 RobotstxtConfig robotstxtConfig = new RobotstxtConfig();
                 RobotstxtServer robotstxtServer = new RobotstxtServer(robotstxtConfig, pageFetcher);
                 CrawlController controller = new CrawlController(config, pageFetcher, robotstxtServer);
 
-                controller.addSeed("http://www.bbc.com/news");
-                controller.addSeed("https://en.wikipedia.org/wiki/Algorithm");
-                controller.addSeed("http://www.popularmechanics.com/technology/");
+                controller.addSeed(seed);
 
                 controller.start(MyCrawler.class, numberOfCrawlers);
                 break;
@@ -88,6 +95,6 @@ public class Controller {
                 for (Set<Integer> s : pg.powerSet(mySet)) {
                     System.out.println(s);
                 }
-        }
+        }*/
     }
 }

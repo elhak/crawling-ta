@@ -22,8 +22,10 @@ public class DBConnect {
     public DBConnect() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://127.0.0.1/dev_tugasakhir_6";
-            conn = DriverManager.getConnection(url, "root", "");
+            String url = "jdbc:mysql://31.220.55.40/tugasakhir";
+            String url_loc = "jdbc:mysql://127.0.0.1/tugasakhir_v2";
+            conn = DriverManager.getConnection(url, "root", "tugasakhir");
+            //conn = DriverManager.getConnection(url_loc, "root", "");
 
             System.out.println("conn built");
         } catch (SQLException e) {
@@ -58,7 +60,7 @@ public class DBConnect {
 
     public List<Doc> getDocList(){
         List<Doc> docList = new ArrayList<Doc>();
-        String sql = "select * from crawling_url group by title order by id limit 100";
+        String sql = "select * from crawling_url order by id limit 200";
         try {
             ResultSet rs = runSql(sql);
             while (rs.next()){
