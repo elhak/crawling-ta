@@ -1,7 +1,3 @@
-Sure! Here’s a sample README.md for your Java repository elhak/crawling-ta. You can customize the details as needed:
-
----
-
 # crawling-ta
 
 A Java project for web crawling, data extraction, or related tasks.
